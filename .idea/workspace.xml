@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b156132-83a0-42e7-9b5a-efccf95695ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webdriverioJS/JMC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webdriverioJS/driverinvoke.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webdriverioJS/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webdriverioJS/primvariables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webdriverioJS/wdio.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
