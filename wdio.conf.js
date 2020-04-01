@@ -17,7 +17,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,7 +52,7 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'firefox',
+        browserName: 'chrome',
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -89,7 +89,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://app.hubspot.com/login',
+    baseUrl: 'https://www.amazon.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -105,7 +105,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services: ['chromedriver','selenium-standalone'],
+    // services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
