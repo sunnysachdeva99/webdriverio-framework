@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>My practice program for Numbers</h1>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+//The toString() method returns a number as a string.
+var x = 123;
+document.getElementById('demo1').innerHTML=x.toString();
+var a = 9.656;
+
+document.getElementById('demo2').innerHTML=a.toFixed(0)+"<br>"+a.toFixed(2);
+
+//Number() can be used to convert JavaScript variables to numbers:
+
+document.getElementById("demo3").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("John");
+  
+ //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+document.getElementById("demo3").innerHTML = 
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10");  
+  
+ //parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+document.getElementById("demo3").innerHTML = 
+  parseFloat("10") + "<br>" +
+  parseFloat("10.33") + "<br>" +
+  parseFloat("10 6") + "<br>" +  
+  parseFloat("10 years") + "<br>" +
+  parseFloat("years 10");    
+
+</script>
+
+</body>
+</html>
