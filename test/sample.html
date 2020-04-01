@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <h1>Hello World</h1>
+        <script>
+            function myfunction() {
+                document.getElementById("demo").innerHTML="Clicked on Button !!!";
+                document.getElementById('demo').style.display = 'block';
+                document.getElementById('demo').style.fontSize = '40px'
+            }
+        </script>
+        <script src="C:\Users\venkata.putluri\Desktop\JavaScript\variables.js"></script>
+    </head>
+    <body>
+        <button id='button' onmouseover='this.innerHTML=Date()' onmouseout='this.innerHTML="ClickMe"'>ClickMe!</button>
+        <button id='button' onClick='myfunction()'>ClickMe!</button>
+        <p id='demo'></p>
+        <button id='button' onClick='sample()'>Sample!</button>
+        <p id='sample'></p>
+    </body>
+</html>
