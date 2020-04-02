@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Program on Conditional statements</h1>
+</head>
+<body>
+<p id="demo"></p>
+<p id="choice"></p>
+<button onclick="myFunction()">ClickOnMe</button>
+<script>
+/*
+ Use if to specify a block of code to be executed, if a specified condition is true
+ Use else to specify a block of code to be executed, if the same condition is false
+ Use else if to specify a new condition to test, if the first condition is false
+ Use switch to specify many alternative blocks of code to be executed
+ */
+
+function myFunction()
+{
+ var wishes;
+ var hours = new Date().getHours();
+ if(hours < 10)
+	 {
+	 wishes="good morning";
+	 }else if(hours > 10)
+		 {
+		 wishes="good day";
+		 }
+		 else
+			 {
+			 wishes="good evening";
+			 }
+ document.getElementById("demo").innerHTML = wishes;
+		 }
+		 
+		 
+//Switch Case
+
+/*
+
+Use the switch statement to select one of many code blocks to be executed.
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+When JavaScript reaches a break keyword, it breaks out of the switch block.
+This will stop the execution of inside the block.
+The default keyword specifies the code to run if there is no case match:
+
+ 
+ */
+ var text;
+ switch(new Date().getDay())
+ {
+ case 6:
+	 text = "Sunday";
+	 break;
+ case 4:
+	 text = "Thursday";
+	 break; 
+ default:
+	 text = "looking for the update"
+ }
+ document.getElementById("choice").innerHTML = text;
+</script>
+</body>
+</html>

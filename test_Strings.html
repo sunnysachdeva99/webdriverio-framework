@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>My practice program for strings</h1>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+var a = 'john';
+var b = new String('john');
+document.getElementById('demo1').innerHTML=(a==b);
+/*(x === y) is false because x and y have different types (string and object)
+When using the === operator, equal strings are not equal, 
+because the === operator expects equality in both type and value.
+
+Don't create strings as objects. It slows down execution speed.
+The new keyword complicates the code. This can produce some unexpected results:
+*/
+document.getElementById('demo2').innerHTML=(a===b);
+
+//String methods 
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+document.getElementById('demo3').innerHTML=sln;
+
+//The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+
+//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+
+//The search() method searches a string for a specified value and returns the position of the match:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.getElementById('demo3').innerHTML=pos;
+//substr() is similar to slice().
+//The difference is that the second parameter specifies the length of the extracted part.
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7);
+
+document.getElementById('demo3').innerHTML=res;
+
+//The replace() method replaces a specified value with another value in a string:
+//By default, the replace() method replaces only the first match:
+
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+document.getElementById('demo3').innerHTML=n;
+
+//concat() joins two or more strings:
+var text = "Hello" + " " + "World!";
+var text = "Hello".concat(" ", "World!");
+document.getElementById('demo3').innerHTML=text;
+
+//The trim() method removes whitespace from both sides of a string:
+var str = "       Hello World!        ";
+alert(str.trim());
+document.getElementById('demo3').innerHTML=str;
+
+//The charAt() method returns the character at a specified index (position) in a string:
+var str = "HELLO WORLD";
+document.getElementById('demo3').innerHTML=str.charAt(0);
+
+//A string can be converted to an array with the split() method:
+var txt = "a,b,c,d,e";   // String
+var arr=txt.split(",");
+document.getElementById("demo3").innerHTML = txt.split(",");
+
+</script>
+
+</body>
+</html>
