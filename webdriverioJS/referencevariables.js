@@ -1,7 +1,6 @@
 console.log("Reference Type Variables Begins");
 /* Reference Types Variablses
     Object
-    Array
     Function
 */
 
@@ -33,7 +32,6 @@ console.log(colors.length);
 console.log(colors[0]);
 
 // Function Reference Type
-
 
 // Perfoming a task
 function greets(name){
