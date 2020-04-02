@@ -4,7 +4,7 @@
   "description": "This is webdriver io script",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run wdio.conf.js"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "@wdio/allure-reporter": "^6.0.12",
     "@wdio/local-runner": "^6.0.12",
     "@wdio/mocha-framework": "^6.0.12",
+    "@wdio/spec-reporter": "^6.0.12",
     "@wdio/sync": "^6.0.12",
     "chai": "^4.2.0",
     "chai-webdriverio": "^1.0.0",
