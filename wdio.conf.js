@@ -105,8 +105,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver','selenium-standalone'],
-    // services: ['chromedriver'],
+    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -125,7 +124,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}],'html'],
+    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
  
     //
     // Options to be passed to Mocha.
@@ -194,13 +193,12 @@ exports.config = {
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
     beforeTest: function () {
-                const chai = require('chai')
-                const chaiWebdriver = require('chai-webdriverio').default
-                chai.use(chaiWebdriver(browser))
-        
-                global.assert = chai.assert
-                global.should = chai.should
-                global.expect = chai.expect
+                const chai = require('chai')	
+        const chaiWebdriver = require('chai-webdriverio').default	
+        chai.use(chaiWebdriver(browser))	
+        global.assert = chai.assert	
+        global.should = chai.should	
+        global.expect = chai.expect
         },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
