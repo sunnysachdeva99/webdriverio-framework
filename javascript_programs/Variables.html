@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Assigning JavaScript Values</h2>
+
+<p>In JavaScript the = operator is used to assign values to variables.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var x, y;
+x = 5;
+y = 6;
+document.getElementById("demo1").innerHTML = x + y;
+
+var str = "This is String type"
+document.getElementById("demo2").innerHTML = str;
+
+var bool = true
+document.getElementById("demo3").innerHTML = bool;
+
+document.write(
+typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null);
+</script>
+
+</body>
+</html>

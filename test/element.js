@@ -22,4 +22,12 @@ describe("interaction with web elements", function(){
 
     });
 
+    it("click on a Todays Deals", function(){
+
+        browser.url('/')
+        const dealbtn =$(".nav-a=Today's Deals");
+        dealbtn.click();
+        browser.pause(3000)
+    });
+
 });

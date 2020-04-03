@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Control Statements</h1>
+
+<script>
+    document.write("<h2>IF Else condition</h2>")
+var x = 5;
+if(x%2==0){
+    document.write(x+" is an event number")
+}else{
+    document.write(x+" is an odd number")
+}
+document.write("<h2>For loop</h2>")
+for(i=0; i<10; i++){
+    document.write("</br>");
+    document.write(i);
+}
+
+    document.write("<h2>While loop</h2>")
+    while(x<10){
+    document.write("</br>");
+    document.write(x)
+    x++;
+    }
+
+    document.write("<h2>Do-While loop</h2>")
+    do{
+    document.write("</br>");
+    document.write(x)
+    x++;
+    }while(x<10)
+
+    document.write("<h2>Switch statement</h2>")
+    var day = ""
+    switch(new Date().getDay()){
+        case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    }
+    document.write("today is "+day)
+  
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.write(cars+"</br>");
+var cars = new Array("Saab", "Volvo", "BMW");
+cars[0] = "Swift"
+document.write(cars+"</br>");
+document.write("lenght of array is "+cars.length+"</br>");
+
+var person = {firstName:"John", lastName:"Doe", age:46};
+document.write("firstName of the person object "+person["firstName"]+"</br>");
+document.write("ForEach Loop</br>")
+cars.forEach(myFunction)
+function myFunction(value) {
+ document.write(value+"</br>");
+}
+document.write("==========Push() function</br>")
+cars.push("Fortuner")
+cars.forEach(myFunction)
+
+document.write("==========Pop() function</br>")
+cars.pop();
+cars.forEach(myFunction)
+
+document.write("==========join() function</br>")
+document.write(cars.join("**")+"</br>")
+
+document.write("==========Shift() function</br>")
+cars.shift();
+cars.forEach(myFunction)
+
+document.write("==========UnShift() function</br>")
+cars.unshift("Swift");
+cars.forEach(myFunction)
+
+document.write("==========delete() function</br>")
+delete cars[1]
+cars.forEach(myFunction)
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.write(fruits+"</br>")
+document.write("==========Using splice() Add Elements</br>")
+fruits.splice(2, 0, "Lemon", "Kiwi");
+document.write(fruits+"</br>")
+
+document.write("==========Using splice() to Remove Elements</br>")
+fruits.splice(0, 1);
+document.write(fruits+"</br>")
+
+document.write("==========Merging (Concatenating) Arrays</br>")
+document.write(cars.concat(fruits)+"</br>");
+
+document.write("==========Slicing an Array</br>")
+document.write(fruits+"</br>")
+;
+document.write(fruits.slice(1)+"</br>")
+
+document.write("==========Sorting an Array</br>")
+fruits.sort();
+document.write(fruits+"</br>")
+
+document.write("==========Reversing an Array</br>")
+fruits.reverse();
+document.write(fruits+"</br>")
+
+document.write("==========Numeric Sort Array</br>")
+var points = [40, 100, 1, 5, 25, 10];
+document.write(points+"</br>")
+points.sort(function(a, b){return a - b});
+document.write(points+"</br>")
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p id="demo"></p>
+
+<script>
+var x = "We are the so-called \"Vikings\" from the north.";
+document.write( x+"</br>"); 
+
+document.write( "=======The substr() Method </br>"); 
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+document.write( str+"</br>"); 
+document.write( res+"</br>");
+
+document.write( "=======The replace() Method </br>"); 
+document.write( str.replace("Banana", "Orange")+"</br>"); 
+
+document.write( "=======The toUpperCase() Method </br>"); 
+document.write( str.toUpperCase()+"</br>"); 
+
+document.write( "=======The toLowerCase() Method </br>"); 
+document.write( str.toLowerCase()+"</br>");
+
+document.write( "=======The toLocaleUpperCase() Method </br>"); 
+document.write( str.toLocaleUpperCase()+"</br>"); 
+
+document.write( "=======The toLocaleLowerCase() Method </br>"); 
+document.write( str.toLocaleLowerCase()+"</br>"); 
+
+document.write( "=======The String to Array using split() Method </br>"); 
+document.write( str.split(",")+"</br>"); 
+</script>
+
+</body>
+</html>

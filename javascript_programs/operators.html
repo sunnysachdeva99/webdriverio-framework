@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The + Operator</h2>
+<p id="demo1"></p>
+
+<h2>The - Operator</h2>
+<p id="demo2"></p>
+
+<h2>The * Operator</h2>
+<p id="demo3"></p>
+
+<h2>The / Operator</h2>
+<p id="demo4"></p>
+
+<h2>The % Operator</h2>
+<p id="demo5"></p>
+
+
+
+<script>
+var x = 5;
+var y = 2; 
+document.getElementById("demo1").innerHTML = x+y;
+document.getElementById("demo2").innerHTML = x-y;
+document.getElementById("demo3").innerHTML = x*y;
+document.getElementById("demo4").innerHTML = x/y;
+document.getElementById("demo5").innerHTML = x%y;
+
+document.write(x==5);
+document.write("</br>");
+document.write(x==8);
+document.write("</br>")
+document.write(x=="5");
+document.write("</br>")
+document.write(x===5);
+document.write("</br>")
+document.write(x==="5");
+document.write("</br>")
+document.write(x!=="5");
+document.write("</br>")
+document.write(x!==5);
+document.write("</br>")
+
+var age = 15;
+var votable = (age<18)? "Too Young" : "Old enough";
+document.write(votable) 
+document.write("</br>")
+
+var fname = "Raju"
+var lname = "Gade"
+document.write(fname+" "+lname)
+document.write("</br>")
+
+
+function bind(f , l){
+    console.log("name ${f}  ${l}")
+    // Not working need to check later
+}
+
+bind.call(fname,lname);
+</script>
+
+</body>
+</html>
