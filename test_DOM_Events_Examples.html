@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function changeText()
+{
+	var x = document.getElementById("fname");
+	x.value = x.value.toUpperCase();
+}
+
+function mOver(obj)
+{
+	obj.innerHTML="Thank you"
+}
+
+function mOut(obj)
+{
+	obj.innerHTML="Mouse Over Me"
+}
+
+</script>
+</head>
+<body>
+
+Enter your name<input type="text" id="fname" onchange="changeText()">
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse over me</div>
+
+
+</body>
+</html>

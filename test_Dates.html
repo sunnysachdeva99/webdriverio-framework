@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Program on dates</h1>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var d = new  Date();
+//new Date()
+//new Date() creates a new date object with the current date and time:
+var d = new Date("October 13, 2014 11:13:00");
+var d = new Date("03/25/2015");
+document.getElementById("demo").innerHTML=d;
+
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime();
+document.getElementById("demo").innerHTML = d.getFullYear();
+document.getElementById("demo").innerHTML = d.getMonth()+1;
+document.getElementById("demo").innerHTML = d.getDate();
+document.getElementById("demo").innerHTML = d.getHours();
+//In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday"
+document.getElementById("demo").innerHTML = d.getDay();
+</script>
+</body>
+</html>
