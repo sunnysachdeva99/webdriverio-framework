@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Demonstration of how to add a method in a JavaScript Class.</p>
+
+<p id="demo"></p>
+
+<script>
+//Use the keyword class to create a class, and always add the constructor() method.
+//The constructor method is called each time the class object is initialized.
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present(x) {
+    return x + "I have a " + this.carname;
+  }
+//Static methods are defined on the class itself, and not on the prototype.
+//That means you cannot call a static method on the object (mycar), but on the class (Car):
+ static hello() {
+    return "Hello!!";
+  }
+}
+
+mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = Car.hello();
+document.getElementById("demo").innerHTML = mycar.present("Hello ");
+
+</script>
+
+</body>
+</html>
