@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>JavaScript Class</h2>
+
+	<p>In this example we demonstrate a simple class definition and how
+		to use it.</p>
+
+	<p id="demo"></p>
+
+	<script>
+	
+	var carname;
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+}
+
+var mycar = new Car(carname: "Tata");
+
+document.getElementById("demo").innerHTML = mycar.carname;
+</script>
+
+	--------------------------------------------------------------------------------------
+	<h2>JavaScript Class Method</h2>
+
+	<p>Demonstration of how to add a method in a JavaScript Class.</p>
+
+	<p id="demo1"></p>
+
+	<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return "I have a " + this.carname;
+  }
+}
+
+mycar = new Car("TATA");
+
+document.getElementById("demo1").innerHTML = mycar.present();
+</script>
+
+	----------------------------------------------------------------------------------------------
+
+	<h2>JavaScript Class Method</h2>
+
+	<p>Pass a parameter into the "present()" method.</p>
+
+	<p id="demo2"></p>
+
+	<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present(x) {
+    return x + ", I have a " + this.carname;
+  }
+}
+
+mycar = new Car("TATA");
+
+document.getElementById("demo2").innerHTML = mycar.present("Hello");
+</script>
+
+	-----------------------------------------------------------------------------------------------------
+
+	<h2>JavaScript Class Inheritance</h2>
+
+	<p>Use the "extends" keyword to inherit all methods from another
+		class.</p>
+	<p>Use the "super" method to call the parent's constructor
+		function.</p>
+
+	<p id="demo3"></p>
+
+	<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("TATA", "Red");
+document.getElementById("demo3").innerHTML = mycar.show();
+</script>
+
+</body>
+</html>
