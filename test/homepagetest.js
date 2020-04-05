@@ -1,5 +1,5 @@
 // importing the page class by require
-const homePage = require("../pages/homePage");
+const homePage = require("../pages/homepage");
 
 describe('home page elements handle', function(){
 

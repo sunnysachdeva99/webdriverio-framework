@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586104448639' stop='1586104457417'>
+    <name>interact with multiple elements</name>
+    <title>interact with multiple elements</title>
+    <test-cases>
+        <test-case start='1586104448640' status='broken' stop='1586104457416'>
+            <name>verify multi-elements in home page</name>
+            <title>verify multi-elements in home page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-19.2.0'/>
+            </parameters>
+            <steps>
+                <step start='1586104448690' status='passed' stop='1586104451435'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586104456442' status='passed' stop='1586104456445'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586104456454' status='passed' stop='1586104456458'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586104456465' status='passed' stop='1586104457415'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element.geText is not a function</message>
+                <stack-trace>TypeError: element.geText is not a function
+                    at /Users/admin/Documents/project/webdriverio/webdriverio-framework/pages/blazemeterhomepage.js:13:55
+                    at Array.filter (&lt;anonymous>)
+                    at BlazemeterHomePage.get textForLi [as textForLi] (/Users/admin/Documents/project/webdriverio/webdriverio-framework/pages/blazemeterhomepage.js:12:30)
+                    at Context.&lt;anonymous> (/Users/admin/Documents/project/webdriverio/webdriverio-framework/test/blazemeterhomepagetest.js:8:28)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

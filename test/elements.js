@@ -21,6 +21,6 @@ describe('interaction with web elements', function () {
         browser.url('/');
         const searchIcon = $('input.nav-input');
         searchIcon.click();
-    
+
     });
 });
