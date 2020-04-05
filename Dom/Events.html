@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<button onclick="displayDate()">The time is?</button>
+<p></p>
+
+Enter your name: <input type="text" id="fname" onchange="onChange()">
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+
+function displayDate(){
+    document.querySelector('p').innerHTML = new Date();
+}
+
+function onChange(){
+var txt = document.getElementById('fname');
+txt.value = txt.value.toUpperCase();
+}
+
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html>
