@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <script type="text/javascript" src="html2canvas-master/dist/html2canvas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/export/libs/FileSaver.js/FileSaver.min.js"></script>
+ </head>
+ <body>
+  <div class="container" id='container' >
+    <h1>Take screenshot of webpage with html2canvas</h1>
+  </div>
+  <input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();'><br/>
+
+  <!-- Script -->
+  <script type='text/javascript'>
+  function screenshot(){
+   html2canvas(document.getElementById('container')).then(function(canvas) {
+    document.body.appendChild(canvas);
+   });
+  }
+  html2canvas(document.body).then(function(canvas) {
+    // Export canvas as a blob 
+    canvas.toBlob(function(blob) {
+        // Generate file download
+        window.saveAs(blob, "yourwebsite_screenshot.png");
+    });
+});
+  </script>
+
+ </body>
+</html>

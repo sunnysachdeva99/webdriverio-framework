@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Program on Loops</h1>
+<p id="demo"></p>
+<script>
+var cars = ['BMW', 'Volvo', 'Mini'];
+var x;
+
+for (x of cars) {
+  document.write(x + "<br >");
+}
+
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>
