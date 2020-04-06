@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h3>Your Screen:</h3>
+
+    <div id="demo"></div>
+
+    <script>
+        var txt = "";
+        txt += "<p>Total width/height: " + screen.width + "*" + screen.height + "</p>";
+        txt += "<p>Available width/height: " + screen.availWidth + "*" + screen.availHeight + "</p>";
+        txt += "<p>Color depth: " + screen.colorDepth + "</p>";
+        txt += "<p>Color resolution: " + screen.pixelDepth + "</p>";
+
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+
+</body>
+
+</html>

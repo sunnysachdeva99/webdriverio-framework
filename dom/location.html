@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to display the hostname of the current URL.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = location.hostname;
+            if(x.toString() == '127.0.0.1' ){
+                document.getElementById("demo").innerHTML = 'https://www.w3schools.com/';
+            } else {
+                document.getElementById("demo").innerHTML = x;
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>

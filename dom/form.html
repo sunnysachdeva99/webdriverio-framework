@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br>
+        City: <input type="text" name="fname" value="Duckburg"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Click the "Try it" button to display the value of each element in the form.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.forms[0];
+            var txt = "";
+            var i;
+            for (i = 0; i < x.length; i++) {
+                txt = txt + x.elements[i].value + "<br>";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>
