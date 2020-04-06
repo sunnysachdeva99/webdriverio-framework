@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<button>Change color</button>
+
+<form>
+    <div>
+      <label for="fname">First name: </label>
+      <input id="fname" type="text">
+    </div>
+    <div>
+      <label for="lname">Last name: </label>
+      <input id="lname" type="text">
+    </div>
+    <div>
+       <input id="submit" type="submit">
+    </div>
+  </form>
+  <p></p>
+
+<script>
+
+const btn = document.querySelector('button');
+
+
+function bgChange(e) {
+    const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+  console.log(e);
+}  
+
+btn.addEventListener('click', bgChange);
+
+const divs = document.querySelectorAll('div');
+
+for (let i = 0; i < divs.length; i++) {
+  divs[i].onclick = function(e) {
+    e.target.style.backgroundColor = bgChange();
+  }
+}
+
+const form = document.querySelector('form');
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const para = document.querySelector('p');
+
+form.onsubmit = function(e) {
+  if (fname.value === '' || lname.value === '') {
+    e.preventDefault();
+    para.textContent = 'You need to fill in both names!';
+  }
+}
+
+</script>
+
+</body>
+</html>

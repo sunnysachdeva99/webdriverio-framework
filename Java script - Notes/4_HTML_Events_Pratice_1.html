@@ -1,0 +1,72 @@
+<html>
+<body>
+
+    <button>Change color</button>
+
+    <input type="text" value="CLICK HERE">
+
+    <p>Double click anywhere in this example.</p>
+<p id="log"></p>
+
+<p>Test your mouse on me!</p>
+
+<script>
+
+const btn = document.querySelector('button');
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+btn.onclick = function() {
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+}
+
+let input = document.querySelector('input');
+
+input.onblur = inputBlur;
+input.onfocus = inputFocus;
+
+function inputBlur() {
+  input.value = 'Focus has been lost';
+}
+
+function inputFocus() {
+  input.value = 'Focus is here';
+}
+
+let log = document.getElementById('log');
+
+document.ondblclick = logDoubleClick;
+
+function logDoubleClick(e) {
+  log.textContent = `Position: (${e.clientX}, ${e.clientY})`;
+}
+
+const input1 = document.querySelector('input');
+const log1 = document.getElementById('log1');
+
+input1.onkeypress = logKey;
+
+function logKey(e) {
+  log1.textContent += ` ${e.code}`;
+}
+
+const p = document.querySelector('p');
+p.onmouseover = logMouseOver;
+p.onmouseout = logMouseOut;
+
+function logMouseOver() {
+  p.innerHTML = 'MOUSE OVER detected';
+}
+
+function logMouseOut() {
+  p.innerHTML = 'MOUSE OUT detected';
+}
+</script>
+
+</body>
+
+
+</html>

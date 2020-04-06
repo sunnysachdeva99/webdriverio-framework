@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo1">Click the button to display the cookies associated with this document.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<script>
+function myFunction1() {
+  document.getElementById("demo1").innerHTML =
+  "Cookies associated with this document: " + document.cookie;
+}
+</script>
+
+</body>
+
+<body>
+
+    <p>Click the button to display the domain name of the server that loaded this document.</p>
+    
+    <button onclick="myFunction2()">Try it</button>
+    
+    <p id="demo2"></p>
+    
+    <script>
+    function myFunction2() {
+      document.getElementById("demo2").innerHTML = document.domain;
+    }
+    </script>
+    
+</body>
+
+
+</html>
