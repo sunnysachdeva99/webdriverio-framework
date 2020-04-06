@@ -3,80 +3,95 @@
 <head>
 </head>
 <body>
-<h1>Program on Objects</h1>
+	<h1>Program on Objects</h1>
 
-<p id="names"></p>
-<p id="names2"></p>
-<p id="names3"></p>
-<p id="names4"></p>
-<p id="names5"></p>
-<script>
-var fruits=["Banana", "Orange", "Apple", "Mango"];
-/* var first=fruits[0];
-var last=fruits[fruits.length-1]
-document.getElementById("names").innerHTML=first+"<br>"+last
-
-for(i=0;i<fruits.length;i++)
-	{
-	document.write(fruits[i]);
-	} */
-//The JavaScript method toString() converts an array to a string of (comma separated) array values.
-document.getElementById("names").innerHTML=fruits.toString();
+	<p id="names"></p>
+	<p id="names1"></p>
+	<p id="names2"></p>
+	<p id="names2"></p>
+	<p id="names3"></p>
+	<p id="names4"></p>
+	<p id="names5"></p>
+	<p id="names6"></p>
+	<p id="names7"></p>
+	<p id="names8"></p>
+	<p id="names9"></p>
+	<script>
 	
-//The join() method also joins all array elements into a string.
-//It behaves just like toString(), but in addition you can specify the separator:
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		var first = fruits[0];
+		var last = fruits[fruits.length - 1]
+		alert("First and last name");
+		document.getElementById("names").innerHTML = first + "<br>" + last
 
-var fruits = ['Banana', "Orange", "Apple", "Mango"];
-document.getElementById("names").innerHTML = fruits.join(" * ");
+		for (i = 0; i < fruits.length; i++) {
+			alert("Printing values");
+			document.write(fruits[i] +" ");
+		}
+		
+		//The JavaScript method toString() converts an array to a string of (comma separated) array values.
+		alert("Displaying all fruites");
+		document.getElementById("names1").innerHTML = fruits.toString();
 
-//The pop() method removes the last element from an array:
-	
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("names").innerHTML=fruits.pop(); 
-document.getElementById("names3").innerHTML=fruits; 
+		//The join() method also joins all array elements into a string.
+		//It behaves just like toString(), but in addition you can specify the separator:
 
-//The push() method adds a new element to an array (at the end):
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var x = fruits.push("Kiwi");
-alert("it is adding a value by using push()")
-document.getElementById("names4").innerHTML=fruits; 
+		var fruits = [ 'Banana', "Orange", "Apple", "Mango" ];
+		alert("Separating with *");
+		document.getElementById("names2").innerHTML = fruits.join(" * ");
 
-//The shift() method removes the first array element and "shifts" all other elements to a lower index.
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var x = fruits.shift(); 
-document.getElementById("names2").innerHTML=fruits; 
+		//The pop() method removes the last element from an array:
 
-//The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var x = fruits.unshift('Lemon'); 
-document.getElementById("names2").innerHTML=fruits; 
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		alert("Remove the last element");
+		document.getElementById("names3").innerHTML = fruits.pop();
+		//document.getElementById("names3").innerHTML = fruits;
 
-//Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
-//Using delete may leave undefined holes in the array. Use pop() or shift() instead.
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-delete fruits[0]; 
-document.getElementById("names5").innerHTML=fruits; 
+		//The push() method adds a new element to an array (at the end):
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		var x = fruits.push("Kiwi");
+		alert("it is adding a value by using push()")
+		document.getElementById("names4").innerHTML = fruits;
 
-//The splice() method can be used to add new items to an array:
-/*
-The first parameter (2) defines the position where new elements should be added (spliced in).
+		//The shift() method removes the first array element and "shifts" all other elements to a lower index.
+		alert('Remove first index');
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		var x = fruits.shift();
+		document.getElementById("names5").innerHTML = fruits;
 
-The second parameter (0) defines how many elements should be removed.
+		//The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+			alert('Unwhift which is deleted from above statement');
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		var x = fruits.unshift('Lemon');
+		document.getElementById("names6").innerHTML = fruits;
 
-The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+		//Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
+		//Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+		alert('Deleting first array value and index');
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		delete fruits[0];
+		document.getElementById("names7").innerHTML = fruits;
 
-The splice() method returns an array with the deleted items:
-*/
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 1, "Lemon", "Kiwi");
-document.getElementById("names2").innerHTML=fruits; 
+		//The splice() method can be used to add new items to an array:
+		/*
+		 The first parameter (2) defines the position where new elements should be added (spliced in).
 
-//The slice() method slices out a piece of an array into a new array.
-//This example slices out a part of an array starting from array element 1 ("Orange"):
-//The slice() method creates a new array. It does not remove any elements from the source array.
-var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-var citrus = fruits.slice(2);
-document.getElementById("names2").innerHTML=citrus; 
-</script>
+		 The second parameter (0) defines how many elements should be removed.
+
+		 The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+		 The splice() method returns an array with the deleted items:
+		 */
+		var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+		fruits.splice(2, 1, "Lemon", "Kiwi");
+		document.getElementById("names8").innerHTML = fruits;
+
+		//The slice() method slices out a piece of an array into a new array.
+		//This example slices out a part of an array starting from array element 1 ("Orange"):
+		//The slice() method creates a new array. It does not remove any elements from the source array.
+		var fruits = [ "Banana", "Orange", "Lemon", "Apple", "Mango" ];
+		var citrus = fruits.slice(2);
+		document.getElementById("names9").innerHTML = citrus;
+	</script>
 </body>
 </html>

@@ -23,6 +23,7 @@
     "@wdio/mocha-framework": "^6.0.12",
     "@wdio/spec-reporter": "^6.0.12",
     "@wdio/sync": "^6.0.12",
+    "allure-commandline": "^2.13.0",
     "chai": "^4.2.0",
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^80.0.1",
@@ -31,6 +32,7 @@
     "webdriverio": "^6.0.12"
   },
   "dependencies": {
-    "@wdio/cli": "^6.0.12"
+    "@wdio/cli": "^6.0.12",
+    "html2canvas": "^1.0.0-rc.5"
   }
 }

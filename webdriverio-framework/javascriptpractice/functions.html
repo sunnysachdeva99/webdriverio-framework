@@ -9,16 +9,32 @@
 	<p id="demo1"></p>
 	<script>
 		var x = myfunction(20, 10);
-		
+
 		function myfunction(a, b) {
 			return a * b;
 		}
-		
+
 		document.getElementById("demo").innerHTML = x;
-		
-		document.getElementById("demo1").innerHTML = myfunction(2,5);
-		
-		
+
+		document.getElementById("demo1").innerHTML = myfunction(2, 5);
+	</script>
+
+	------------------------------------------------------------------------
+	<h2>JavaScript Objects</h2>
+
+	<p id="demo2"></p>
+
+	<script>
+		// Create an object:
+		var car = {
+			type : "TATA",
+			model : "500",
+			color : "RED"
+		};
+
+		// Display some data from the object:
+		document.getElementById("demo2").innerHTML = "The car type is "
+				+ car.type +" and color is " +car.color;
 	</script>
 </body>
 </html>

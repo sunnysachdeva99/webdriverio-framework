@@ -2,41 +2,82 @@
 <html>
 <body>
 	<h1>Program on Loops</h1>
+	<h2>JavaScript For Loop</h2>
+
+	<p id="demo"></p>
+
 	<script>
-var cars = ['Maruthi', 'BMW', 'Volvo', 'TATA'];
-var x;
+		var cars = [ "BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi" ];
+		var text = "";
+		var i;
+		for (i = 0; i < cars.length; i++) {
+			text += cars[i] + "<br>";
+		}
+		document.getElementById("demo").innerHTML = text;
+	</script>
+	----------------------------------------------------------------------------------------
+	<h2>JavaScript For Loop</h2>
 
-for (x of cars) {
-  document.write(x + "<br >");
-}
+	<p id="demo1"></p>
+
+	<script>
+		var text = "";
+		var i;
+		for (i = 0; i < 5; i++) {
+			text += "The number is " + i + "<br>";
+		}
+		document.getElementById("demo1").innerHTML = text;
+	</script>
+
+	-----------------------------------------------------------------------------------------
 
 
-/*var fruittype = 'Apples';
+	<h2>JavaScript For/In Loop</h2>
 
-	switch (fruittype) {
-	    case 'Oranges':
-	      document.write('Oranges');
-	      break;
-	    case 'Apples':
-	    	document.write('Apples');
-	      break;
-	    case 'Bananas':
-	    	document.write('Bananas');
-	      break;
-	    case 'Grapes':
-	    	document.write('Grapes');
-	      break;
-	    case 'Mangoes':
-	    	document.write('Mangoes');
-	      break;
-	    case 'Kiwi':
-	    	document.write('Kiwi');
-	      break;
-	    default:
-	    	document.write(`Sorry, we are out of ${fruittype}.`);
-	  }
-	document.write("Is there anything else you'd like?");*/
+	<p>The for/in statement loops through the properties of an object.</p>
 
-</script>
+	<p id="demo2"></p>
+
+	<script>
+		var txt = "";
+		var person = {
+			fname : "Rama",
+			lname : "Reddy",
+			age : 32
+		};
+		var x;
+		for (x in person) {
+			txt += person[x] + "<br>";
+		}
+		document.getElementById("demo2").innerHTML = txt;
+	</script>
+	----------------------------------------------------------------------------------------------
+	<h2>JavaScript While Loop</h2>
+
+	<p id="demo3"></p>
+
+	<script>
+		var text = "";
+		var i = 0;
+		while (i < 10) {
+			text += "<br>The number is " + i;
+			i++;
+		}
+		document.getElementById("demo3").innerHTML = text;
+	</script>
+	------------------------------------------------------------------------------------------------
+	<h2>JavaScript While Loop</h2>
+	<p id="demo4"></p>
+
+	<script>
+		var cars = [ "BMW", "Volvo", "Saab", "Ford" ];
+		var i = 0;
+		var text = "";
+		while (cars[i]) {
+			text += cars[i] + "<br>";
+			i++;
+		}
+		document.getElementById("demo4").innerHTML = text;
+	</script>
 </body>
 </html>

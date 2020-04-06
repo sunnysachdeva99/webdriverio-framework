@@ -6,15 +6,16 @@
 <h1>Program on data types</h1>
 <p id="employee"></p>
 <p id="empdetails"></p>
+<p id="vehicles"></p>
 <script>
 var age = 16;                               // Number
-var name = "Johnson";                      // String
+var name = "Rama";                      // String
 var dept = {Dept:"QA", Designation:"QA Lead"};    // Object
 
 var cars=['Maruthi','Tata','Nissan'];
 
 var person={name:'Rama Reddy',age:31,company:'Gspann'};
-document.getElementById("employee").innerHTML=cars;
+document.getElementById("vehicles").innerHTML=cars;
 document.getElementById("empdetails").innerHTML=person.name+"<br>"+person.age+"<br>"+person.dept;
 
 document.getElementById("employee").innerHTML=name+"<br>"+ age +"<br>"+ dept.Dept + "<br>" +dept.Designation;
