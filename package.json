@@ -31,6 +31,8 @@
     "webdriverio": "^6.0.9"
   },
   "dependencies": {
-    "@wdio/cli": "^6.0.9"
+    "@wdio/cli": "^6.0.9",
+    "mongodb": "^3.5.5",
+    "mysql": "^2.18.1"
   }
 }
