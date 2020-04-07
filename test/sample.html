@@ -15,6 +15,47 @@
         <button id='button' onClick='myfunction()'>ClickMe!</button>
         <p id='demo'></p>
         <button id='button' onClick='sample()'>Sample!</button>
+        <button id='b1' onkeydown='this.innerHTML=Date()'>Sample!</button>        
         <p id='sample'></p>
+
+        <button id="elem">Click me</button>
+
+<script>
+  class Menu {
+    handleEvent(event) {
+      switch(event.type) {
+        case 'mousedown':
+          elem.innerHTML = "Mouse button pressed";
+          break;
+        case 'mouseup':
+          elem.innerHTML += "...and released.";
+          break;
+      }
+    }
+  }
+
+  let menu = new Menu();
+  elem.addEventListener('mousedown', menu);
+  elem.addEventListener('mouseup', menu);
+</script>
+
+<button id='b2'>Add Alert</button>
+        <script>
+            class Over {
+                handleEvent(event){
+                    switch(event.type){
+                        case 'mouseup':
+                            elem.innerHTML='Mouse is Scroll Up!!';
+                            break;
+                        case 'mousedown':
+                            elem.innerHTML='Mouse is Scroll Down!!';
+                            break;
+                    }
+                }
+            }
+            let but = new Over()
+            b2.addEventListener('mouseup', but);
+            b2.addEventListener('mousedown', but);
+        </script>
     </body>
 </html>
