@@ -6,11 +6,22 @@
 <h1>Program on data types</h1>
 <p id="array"></p>
 <p id="objects"></p>
+<p id="bool"></p>
 <script>
+//JavaScript variables can hold many data types: numbers, strings, booleans, objects and more:
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
 var cars=['volvo','tata','maruthi'];
 var person={name:'Veera',age:37,dept:'IT'};
 document.getElementById("array").innerHTML=cars;
 document.getElementById("objects").innerHTML=person.name+"<br>"+person.age+"<br>"+person.dept;
+
+var x = 5;
+var y = 5;
+var z = 6;
+document.getElementById("bool").innerHTML =
+(x == y) + "<br>" + (x == z);
 
 </script>
 </body>
