@@ -1,4 +1,8 @@
+var a = 10;
+const c = 20;
+
 function sample(){
+    var a =20;
     document.getElementById('sample').innerHTML='Paragraph Changed';
     alert(5+6);
     console.log('5+6')
@@ -17,6 +21,9 @@ y = 20.5;
 z = x+y
 console.log(x, y, z)
 
+let a, b;
+a=10;
+b=20;
 
 var x = 10;
 var y =  '10';
@@ -26,8 +33,6 @@ console.log(x, y, 'X and Y are equal ', x==y, ', X and Y are strict equal ', x==
 var str = 'hello';
 str = str + ' world';
 console.log(str)
-
-
 
 var x = 10;
 var y =  '10';
@@ -74,6 +79,61 @@ console.log(current_date.toTimeString())
 console.log(current_date.toLocaleTimeString())
 console.log(Date.parse('2020-04-05'))
 console.log(new Date(Date.parse("March 21, 2012")).toLocaleTimeString())
+
+
+
+//control structure
+//while
+var text = "";
+var i = 0;
+while (i < 10) {
+  text += "<br>The number is " + i;
+  i++;
+
+//switch
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+console.log(day)
+
+//for
+
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+
+//foreach
+
+var fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+function myFunction(item, index) {
+  console.log(item, index) 
+}
 
 
 //functions
