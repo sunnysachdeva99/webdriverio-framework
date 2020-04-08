@@ -1,4 +1,3 @@
-
 // JavaScript Functions (names) must begin with:
 
 /* A letter (A-Z or a-z)
@@ -134,20 +133,19 @@ console.log(multiply(12,5));
 
 //Arrow Funtion
 //ES6
-const mul = (a, b) => a * b;
-console.log(mul(13,5));
-
+const multiFn = (a, b) => a * b;
+console.log(multiFn(13,5));
 const div = () => 15 / 5; // if NO param, then parentheses required
 console.log(div());
 
 const nums = n => "This is my no: " + n ; //if only one param then no parentheses, no bracket {} and no return required
  console.log(nums(10));
 
- const add = (a, b) => { //if there are more than one statement in the block then block bracket {} and return required
+ const addFn = (a, b) => { //if there are more than one statement in the block then block bracket {} and return required
      var z = a + b;
      return z;
  }
- console.log(add(1, 3));
+ console.log(addFn(1, 3));
 
 
 
@@ -472,7 +470,7 @@ car.start.call(aircraft); // start the aircraft
 car.speedup.call(aircraft); // speedup the aircraft
 car.stop.call(aircraft); // stop the aircraft
 
-var name = 'aeroplance';
+var AroName = 'aeroplance';
 aircraft.fly.call(this); // fly the aeroplance
 aircraft.fly.call(car); // fly the car
 

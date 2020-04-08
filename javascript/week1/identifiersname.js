@@ -5,11 +5,11 @@ A dollar sign ($)
 Or an underscore (_) */
 
 
-var Name = "SKumar";
+var myName = "SKumar";
 var empId = 861;
 var company = 'Gpann';
 
-console.log(Name);
+console.log(myName);
 console.log(empId);
 console.log(company);
 

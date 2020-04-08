@@ -85,14 +85,14 @@ for (let i = 0; i < myObjArray.length; i++) {
 
 
 // Inserting but // throw err; Rethrow non-MySQL errors
-// const insertObjSql = "INSERT INTO person set ?";
-// myObjArray.forEach(function(element){
-//     var query = con.query(insertObjSql, element, function (err, result) {
-//         if (err) throw err;
-//         console.log(query.sql);
-//         console.log(i = (i == 0) ? 1 : i + 1, "record inserted");
-//     });
-// });
+const insertObjSql = "INSERT INTO person set ?";
+myObjArray.forEach(function(element){
+    var query = con.query(insertObjSql, element, function (err, result) {
+        if (err) throw err;
+        console.log(query.sql);
+        console.log(i = (i == 0) ? 1 : i + 1, "record inserted");
+    });
+});
 
 
 // Retreive the records from Table by 'Where' clause

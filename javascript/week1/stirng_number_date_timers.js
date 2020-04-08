@@ -1,63 +1,62 @@
-// String and it's methods
-
-var str;
+//String and it's methods
+var strng;
 var pos;
 var num1, num2;
 var dt;
 
-str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-console.log(str.length);
-console.log(str.constructor);
+strng = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log(strng.length);
+console.log(strng.constructor);
 
-str = new String('sdsdd');
-console.log(str.length);
+strng = new String('sdsdd');
+console.log(strng.length);
 
 
-str = "Please locate where 'locate' occurs!";
-pos = str.search("locate", 15);
+strng = "Please locate where 'locate' occurs!";
+pos = strng.search("locate", 15);
 console.log(pos);
 
 
-str = "Please locate where 'locate' occurs!";
-pos = str.indexOf("locate", 15);
+strng = "Please locate where 'locate' occurs!";
+pos = strng.indexOf("locate", 15);
 console.log(pos);
 
 
-str = "Please locate where 'locate' occurs!";
-pos = str.lastIndexOf("locate", 15);
+strng = "Please locate where 'locate' occurs!";
+pos = strng.lastIndexOf("locate", 15);
 console.log(pos);
 
 
-str = "Apple, Banana, Kiwi";
-pos = str.slice(7, 13); // left to right
+strng = "Apple, Banana, Kiwi";
+pos = strng.slice(7, 13); // left to right
 console.log(pos);
 
-pos = str.slice(-12, -6); // right to left
+pos = strng.slice(-12, -6); // right to left
 console.log(pos);
 
-pos = str.slice(7); // left to right
+pos = strng.slice(7); // left to right
 console.log(pos);
 
-pos = str.slice(-7); // right to right
+pos = strng.slice(-7); // right to right
 console.log(pos);
 
-pos = str.substring(7, 13); // left to right
+pos = strng.substring(7, 13); // left to right
 console.log(pos);
 
-pos = str.substr(7, 13); // left to right
-console.log(pos);
-
-
-str = "Please visit Microsoft and Microsoft!"; // '/g' global match
-pos = str.replace(/Microsoft/g, "W3Schools");
-console.log(pos);
-
-pos = str.replace(/MICROSOFT/i, "W3Schools");
+pos = strng.substr(7, 13); // left to right
 console.log(pos);
 
 
-str = "       Hello World!        "; // use replace functions to trim the string
-//alert(str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''));
+strng = "Please visit Microsoft and Microsoft!"; // '/g' global match
+pos = strng.replace(/Microsoft/g, "W3Schools");
+console.log(pos);
+
+pos = strng.replace(/MICROSOFT/i, "W3Schools");
+console.log(pos);
+
+
+strng = "       Hello World!        "; // use replace functions to trim the string
+//alert(strng.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''));
 
 // You can also use the replace solution above to add a trim function to the JavaScript String.prototype
 /*
@@ -66,39 +65,39 @@ if (!String.prototype.trim) {
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
   }
-  var str = "       Hello World!        ";
-  alert(str.trim());
+  var strng = "       Hello World!        ";
+  alert(strng.trim());
 
  */
 
  //Property Access
  // ECMAScript 5 (2009) allows property access [ ] on strings
-str = "HELLO WORLD";
+strng = "HELLO WORLD";
 console.log(str[0]); // H 
 
-str = "a,b,c,d,e,f";
-var arr = str.split(",");
+strng = "a,b,c,d,e,f";
+var arr = strng.split(",");
 console.log(arr.length + " ==> " + " "  + arr[0] + " " + arr[1] + " " + arr[2] + " " +  arr[3] + " " + arr[4] + " " + arr[5]);
 
 
-str = "Hello";       // String
-pos = str.split("");
+strng = "Hello";       // String
+pos = strng.split("");
 console.log(pos);           // Split in characters
 
 
-function employee(name, jobtitle, born) {
+function employ(name, jobtitle, born) {
     this.name = name;
     this.jobtitle = jobtitle;
     this.born = born;
   }
-  employee.prototype.salary = 2000;
+  employ.prototype.salary = 2000;
   
-  var fred = new employee("Fred Flintstone", "Caveman", 1970);
+  var fred = new employ("Fred Flintstone", "Caveman", 1970);
   console.log(fred.salary);
 
 
-  str = "Hello world!";
-  pos = str.repeat(2);
+  strng = "Hello world!";
+  pos = strng.repeat(2);
   console.log(pos);
 
 
@@ -113,11 +112,11 @@ console.log(exp + " " + pxe);
 
 
 // The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate
-str = 0.2 + 0.1; 
+strng = 0.2 + 0.1; 
 console.log(str); // expected 0.3 but actual 0.30000000000000004
 
 // To overcome above issue
-str = (0.2 * 10 + 0.1 * 10) / 10; 
+strng = (0.2 * 10 + 0.1 * 10) / 10; 
 console.log(str); // 0.3
 
 

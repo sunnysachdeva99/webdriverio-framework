@@ -30,12 +30,11 @@ console.log('======var ends here====');
 
 
 //Problem with var type in Global Scope
-
 var color = 'red';
 let age = 6;
 
 console.log(window.color);
 console.log(window.age);
-console.log(window.varFunctionScope);
+console.log(window.varFunctionScope());
 
 console.log("Global, Function & Block Scope Ends");
