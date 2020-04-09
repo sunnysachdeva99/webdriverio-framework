@@ -206,7 +206,7 @@ exports.config = {
         chai.use(chaiWebdriver(browser))
 
         global.assert = chai.assert
-        global.should = chai.should
+        global.should = chai.should();
         global.expect = chai.expect
     },
     /**
