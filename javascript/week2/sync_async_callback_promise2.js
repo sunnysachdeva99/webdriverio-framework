@@ -74,36 +74,36 @@
 // Exa3 - to resolve the above issue - undefined by using Promise
 
 // console.log('Start');
-// function loginUser(email, pwd) {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log('we have data now');
-//             resolve({ userEmail: email });
-//         }, 2000);
-//     });
-// }
+function loginUser(email, pwd) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('we have data now');
+            resolve({ userEmail: email });
+        }, 2000);
+    });
+}
 
-// function getUserVideos(email) {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(['vedeo1', 'video2', 'video3']);
-//         }, 1000);
-//     });
-// }
+function getUserVideos(email) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['vedeo1', 'video2', 'video3']);
+        }, 1000);
+    });
+}
 
-// function getVideoDetails(video) {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Title of video: Shikara');
-//         }, 500);
-//     });
-// }
+function getVideoDetails(video) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Title of video: Shikara');
+        }, 500);
+    });
+}
 
 // calling the above methods
-// loginUser('sumanta@gmail.com', 12344)
-// .then(user => getUserVideos(user.userEmail))
-// .then(video => getVideoDetails(video[0]))
-// .then(details =>console.log(details));
+loginUser('sumanta@gmail.com', 12344)
+.then(user => getUserVideos(user.userEmail))
+.then(video => getVideoDetails(video[0]))
+.then(details =>console.log(details));
 
 // console.log('Finish');
 

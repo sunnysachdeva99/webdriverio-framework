@@ -46,4 +46,4 @@ const facebook = new Promise(resolve => {
 });
 
 Promise.all([youtube, facebook])
-.then(result => console.log(result));
+.then(result => {console.log(result);});
