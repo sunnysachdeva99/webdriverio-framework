@@ -92,7 +92,7 @@ catch(error){
     console.log(error.message)
 }
 
-*/
+
 
 //should
 
@@ -105,3 +105,5 @@ function sample(){
 sample.should.be.an('function')
 obj.should.be.an('object')
 obj.should.have.property('name').with.lengthOf(4);
+
+*/
