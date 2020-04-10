@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586519879481' stop='1586519879831'>
+    <name>assertion library</name>
+    <title>assertion library</title>
+    <test-cases>
+        <test-case start='1586519879481' status='failed' stop='1586519879830'>
+            <name>verify assertion</name>
+            <title>verify assertion</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-19.2.0'/>
+            </parameters>
+            <steps>
+                <step start='1586519879493' status='passed' stop='1586519879828'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected 'chai' to be a number</message>
+                <stack-trace>AssertionError: expected 'chai' to be a number
+                    at Context.&lt;anonymous> (/Users/admin/Documents/project/webdriverio/webdriverio-framework/javascript/week2/chai_library.js:9:30)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

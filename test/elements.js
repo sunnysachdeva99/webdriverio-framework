@@ -1,6 +1,6 @@
 describe('interaction with web elements', function () {
     it('enter value in field', function () {
-        browser.url('/');
+        browser.url('https://www.amazon.com');
         const search = $('#twotabsearchtextbox');
         search.setValue('Apple Mac Book');
         browser.pause(5000);
@@ -9,7 +9,7 @@ describe('interaction with web elements', function () {
 
 
     it('get text of field', function () {
-        browser.url('/');
+        browser.url('https://www.amazon.com');
         const label = $('span.a-size-base.a-color-base');
         let text = label.getText();
         console.log(text);
@@ -18,7 +18,7 @@ describe('interaction with web elements', function () {
 
 
     it('click on a field', function () {
-        browser.url('/');
+        browser.url('https://www.amazon.com');
         const searchIcon = $('input.nav-input');
         searchIcon.click();
 
