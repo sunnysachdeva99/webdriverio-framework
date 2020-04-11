@@ -1,3 +1,14 @@
+/*
+Assert
+The assert style is very similar to node.js’ included assert module, 
+with a bit of extra sugar. Of the three style options, assert is the only one that is not chainable. 
+The Assert API covers the TDD assertion style.
+
+The assert interfaces do not modify Object.prototype. So it's better choice in an environment where you cannot or do not want to change Object.prototype.
+The assert interface supports custom messages just about everywhere.
+*/
+
+
 describe('chai assertion library', () => {
 
     it('verify should assertion', () => {

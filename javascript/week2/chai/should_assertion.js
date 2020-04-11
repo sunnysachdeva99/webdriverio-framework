@@ -3,6 +3,10 @@ Should
     The should style allows for the same chainable assertions as the expect interface, 
     however it extends each object with a should property to start your chain. 
     This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
+
+    The should interfaces can modify Object.prototype. The should interface does not support custom messages.
+
+    should require, the function is being executed
 */
 
 

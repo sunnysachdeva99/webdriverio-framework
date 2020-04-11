@@ -1,3 +1,18 @@
+/*
+Expect:
+It's BDD styles which is used the chainable language to construct assertions, 
+but they differ in the way an assertion is initially constructed. Check out the Style Guide for a comparison.
+
+The following are provided as chainable getters to improve the readability of your assertions.
+
+The expect interfaces do not modify Object.prototype. So it's better choice in an environment where you cannot or do not want to change Object.prototype.
+The expect interface supports custom messages just about everywhere.
+
+expect require is just a reference to the expect function.
+ */
+
+
+
 
 describe('chai assertion library', function () {
 
