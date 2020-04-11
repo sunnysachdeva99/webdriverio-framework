@@ -46,7 +46,7 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -107,7 +107,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -125,8 +125,8 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
- 
+    reporters: ['spec', ['allure', { outputDir: 'allure-results' }]],
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -194,13 +194,13 @@ exports.config = {
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
     beforeTest: function () {
-                const chai = require('chai')	
-        const chaiWebdriver = require('chai-webdriverio').default	
-        chai.use(chaiWebdriver(browser))	
-        global.assert = chai.assert	
-        global.should = chai.should	
+        const chai = require('chai')
+        const chaiWebdriver = require('chai-webdriverio').default
+        chai.use(chaiWebdriver(browser))
+        global.assert = chai.assert
+        global.should = chai.should()
         global.expect = chai.expect
-        },
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
@@ -216,7 +216,7 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             browser.takeScreenshot();
         }

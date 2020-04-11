@@ -1,0 +1,31 @@
+/*
+
+DYNAMICALLY GENERATING TESTS
+    Given Mocha's use of Function.prototype.call and function expressions to define suites and test cases, 
+    it's straightforward to generate your tests dynamically. No special syntax is required —
+     plain ol' JavaScript can be used to achieve functionality similar to "parameterized" tests, 
+     which you may have seen in other frameworks.
+*/
+
+
+
+function add() {
+    return Array.prototype.slice.call(arguments).reduce(function (prev, curr) {
+        return prev + curr;
+    }, 0);
+}
+
+describe('add()', function () {
+    var tests = [
+        { args: [1, 2], expected: 3 },
+        { args: [1, 2, 3], expected: 6 },
+        { args: [1, 2, 3, 4], expected: 10 }
+    ];
+
+    tests.forEach(function (test) {
+        it('correctly adds ' + test.args.length + ' args', function () {
+            var res = add.apply(null, test.args);
+            assert.equal(res, test.expected);
+        });
+    });
+});
