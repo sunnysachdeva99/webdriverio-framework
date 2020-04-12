@@ -1,4 +1,4 @@
-class BlazePage {
+class BlazeHomePage {
 
     get parent() {
         return $('ul.list-nav-links');
@@ -22,4 +22,4 @@ class BlazePage {
     }
 }
 
-module.exports = new BlazePage();
+module.exports = new BlazeHomePage();

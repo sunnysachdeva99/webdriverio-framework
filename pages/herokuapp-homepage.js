@@ -1,4 +1,4 @@
-class HerokuappPage {
+class HerokuappHomePage {
 
 
     getHeaderTxt() {
@@ -37,4 +37,4 @@ class HerokuappPage {
 
 }
 
-module.exports = new HerokuappPage();
+module.exports = new HerokuappHomePage();

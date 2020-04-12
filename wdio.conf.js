@@ -1,3 +1,12 @@
+const url = require('./urls')
+const ENV = process.env.ENV
+
+if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
+    console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
+    process.exit();
+}
+
+
 exports.config = {
     //
     // ====================
@@ -22,6 +31,11 @@ exports.config = {
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
+        './test/amazonsearch-test.js',
+        './test/blazepage-test.js',
+        './test/freshworks-test.js',
+        './test/herokuapp-test.js',
+        './test/multiple-env.js'
     ],
     //
     // ============
@@ -89,9 +103,9 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    // baseUrl: 'https://www.amazon.com',
-    baseUrl: 'http://the-internet.herokuapp.com',
-    //
+    // baseUrl: 'https://app.hubspot.com',
+    baseUrl: url[process.env.ENV],
+
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
     //
@@ -132,7 +146,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        // timeout: 60000
+        timeout: process.env.DEBUG === 'true' ? 999999 : 60000
     },
     //
     // =====

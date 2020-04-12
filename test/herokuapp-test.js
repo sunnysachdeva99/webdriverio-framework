@@ -1,11 +1,8 @@
-const herokuappPage = require('../pages/herokuapp');
+const herokuappPage = require('../pages/herokuapp-homepage');
 
 
 describe('handle elements', function () {
     it('verify URL & elementS', function () {
-        // browser.url('http://the-internet.herokuapp.com');
-        // expect(browser.getUrl()).equals('http://the-internet.herokuapp.com/');
-
         browser.url('/');
         expect(browser.getUrl()).equals(`${browser.options.baseUrl}/`);
         herokuappPage.clickOnLinkElement(6);

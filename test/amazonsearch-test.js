@@ -1,6 +1,8 @@
+// ENV=qa npm test -- --spec ./test/amazonsearch-test.js
+
 describe('interaction with web elements', function () {
     it('enter value in field', function () {
-        browser.url('https://www.amazon.com');
+        browser.url('/');
         const search = $('#twotabsearchtextbox');
         search.setValue('Apple Mac Book');
         browser.pause(5000);
@@ -9,7 +11,7 @@ describe('interaction with web elements', function () {
 
 
     it('get text of field', function () {
-        browser.url('https://www.amazon.com');
+        browser.url('/');
         const label = $('span.a-size-base.a-color-base');
         let text = label.getText();
         console.log(text);
@@ -18,9 +20,10 @@ describe('interaction with web elements', function () {
 
 
     it('click on a field', function () {
-        browser.url('https://www.amazon.com');
+        browser.url('/');
         const searchIcon = $('input.nav-input');
         searchIcon.click();
 
     });
 });
+
