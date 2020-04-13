@@ -1,10 +1,11 @@
 /*
- External Test Data 
+ Test Data Sources (JavaScript Obj, CSV)
  */
 
 const hubspotSignUpPage = require('../pages/hubspot-signuppage');
 const registerData = require('../test-data/hubspot-signup-data');
 const loginData = require('../test-data/hubspot-login-data');
+const arrayData = require('../util/data-util');
 
 before(() => {
     browser.url('/');
@@ -14,17 +15,21 @@ before(() => {
 
 describe('log into account : ', () => {
 
+    var loginInputData = arrayData.getArrayObjectFromCSV('./test-data/hubspot-login-creds.csv');
+    var loginObj = loginInputData[0];
+    
     it('enter username', () => {
-        let email = loginData.email;
+        // let email = loginData.email; // data from JS file
+        let email = loginObj.email; // data from CSV file 
         hubspotSignUpPage._getUserNameField.setValue(email);
         expect(hubspotSignUpPage._getUserNameField.getValue()).equals(email);
     });
 
     it('enter password', () => {
-        let password = loginData.password;
+        // let password = loginData.password; // data from JS file
+        let password = loginObj.password; // data from CSV file 
         hubspotSignUpPage._getPasswordField.setValue(password);
         expect(hubspotSignUpPage._getPasswordField.getValue()).equals(password);
-        //browser.debug();
     });
 
     it('click on Log in button', () => {
@@ -47,23 +52,29 @@ describe('log into account : ', () => {
 });
 
 describe.skip('register an account : ', () => {
+    
+    var signupInputData = arrayData.getArrayObjectFromCSV('./test-data/hubspot-signup-creds.csv');
+    var signupObj = signupInputData[0];
     var firstName = '';
     it('enter firstname', () => {
         hubspotSignUpPage._getSignUpLink.click();
         // browser.pause(2000);
-        firstName = registerData.firstName;
+        // firstName = registerData.firstName; // data from JS file
+        firstName = signupObj.firstName;  // data from CSV file
         hubspotSignUpPage._getFirstNameField.setValue(firstName);
         expect(hubspotSignUpPage._getFirstNameField.getValue()).equals(firstName);
     });
 
     it('enter lastname', () => {
-        let lastName = registerData.lastName;
+        // let lastName = registerData.lastName; // data from JS file
+        let lastName = signupObj.lastName; // data from CSV file
         hubspotSignUpPage._getLastNameField.setValue(lastName);
         expect(hubspotSignUpPage._getLastNameField.getValue()).equals(lastName);
     });
 
     it('enter email address', () => {
-        let email = registerData.email;
+        // let email = registerData.email; // data from JS file
+        let email = signupObj.email; // data from CSV file
         hubspotSignUpPage._getEmailAddressField.setValue(email);
         expect(hubspotSignUpPage._getEmailAddressField.getValue()).equals(email);
     });
