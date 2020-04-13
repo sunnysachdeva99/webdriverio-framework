@@ -78,3 +78,8 @@ var a = [
                                  // '=>' is used as arrow function notation
  
   console.log(a3); // logs [8, 6, 7, 9]
+
+  export function square(number) {
+    return number*number;
+  }
+  export { square };

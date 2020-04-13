@@ -1,0 +1,17 @@
+{
+  "name": "chaipratice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1_JS_Chai_Assertions.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}

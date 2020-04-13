@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo1">Aync JS</p>
+
+<button>Try it</button>
+
+<script>
+
+synchronous
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+  let myDate;
+  for(let i = 0; i < 100000; i++) {
+    let date = new Date();
+    myDate = date
+  }
+
+  console.log(myDate);
+
+  let pElem = document.createElement('p');
+  pElem.textContent = 'This is a newly-added paragraph.';
+  document.body.appendChild(pElem);
+});
+
+//asynchronous
+ function greet(name) {
+        alert('Hello ' + name);
+      }
+
+      function processUserInput(callback) {
+        let name = prompt('Please enter your name');
+        callback(name);
+      }
+
+      processUserInput(greet);
+
+
+    </script>
+  </body>
+
+
+
+
+</html>

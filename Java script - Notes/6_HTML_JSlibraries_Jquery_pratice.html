@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head> 
+<body>
+
+    <h1>Getting Text Content</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>  
+    <h2 id="03">Hello Japan!</h2>
+    
+    <p id="demo"></p>
+
+    <input type="text" name="date" id="date">
+    
+    <script>
+    $(document).ready(function() {
+        alert("Hello World!");
+      var myElement = $("#02");
+      var myText = myElement.text();
+      $("#demo").text(myText); 
+    });
+
+    $( "#date" ).datepicker();
+    </script>
+</body>
+</html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Remove an HTML Element</h2>
+
+<h2 id="id01">Hello World!</h2>
+<h2 id="id02">Hello Sweden!</h2>
+
+<script>
+$(document).ready(function() {
+  $("#id02").remove();
+});
+</script>
+
+</body>
+</html>
