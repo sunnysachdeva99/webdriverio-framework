@@ -1,4 +1,4 @@
-// const homePage = require("../pages/homepage")
+// const homePage = require("../homepage")
 
 // describe("handling homepage elements", function(){
 //     it("access homepage elements", function(){

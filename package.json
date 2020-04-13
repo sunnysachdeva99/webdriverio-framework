@@ -30,6 +30,7 @@
     "chai": "^4.2.0",
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^80.0.1",
+    "cross-env": "^7.0.2",
     "local-runner": "^0.1.1-alpha",
     "wdio-chromedriver-service": "^5.0.2",
     "wdio-cucumber-reporter": "0.0.2",

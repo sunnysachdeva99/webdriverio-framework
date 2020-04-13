@@ -1,9 +1,11 @@
+const url = require('./urls');
+const ENV = process.env.ENV;
+
 var baseUrl;
-if(process.env.SERVER ==='dev'){
-    baseUrl='http://www.google.com'
+if(['qa','dev','prod'].includes(ENV)){
+    baseUrl=url[ENV];
 }else{
-    // baseUrl='https://www.amazon.com/'
-    baseUrl='http://webdriveruniversity.com'
+    baseUrl='http://www.google.com'
 }
 
 exports.config = {
@@ -25,7 +27,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './mocha_hooks/**/*.js'
+        './handling_timeouts/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -183,8 +185,41 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        const chai = require('chai')
+        const chaiWebdriver = require('chai-webdriverio').default
+        chai.use(chaiWebdriver(browser))
+
+        global.assert = chai.assert
+        global.should = chai.should();
+        global.expect = chai.expect
+
+        browser.addCommand("getUrlAndTitle", function () {
+            // `this` refers to the `browser` scope
+            return {
+                url: this.getUrl(),
+                title: this.getTitle()
+            };
+        });
+
+        browser.addCommand("waitAndClick", function (selector) {
+            try {
+                $(selector).waitForExist();
+                $(selector).click(); 
+            } catch(Error) {
+                throw new Error("Could not click on selector: " + $(selector));
+            }
+        });
+
+        browser.addCommand("waitAndSendkeys", function (selector, keys) {
+            try {
+                $(selector).waitForExist();
+                $(selector).setValue(keys);
+            } catch(Error) {
+                throw new Error("Could not send keys: " + $(keys) + ", using selector: " + $(selector));
+            }
+        });
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -202,13 +237,13 @@ exports.config = {
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
     beforeTest: function () {
-        const chai = require('chai')
-        const chaiWebdriver = require('chai-webdriverio').default
-        chai.use(chaiWebdriver(browser))
+        // const chai = require('chai')
+        // const chaiWebdriver = require('chai-webdriverio').default
+        // chai.use(chaiWebdriver(browser))
 
-        global.assert = chai.assert
-        global.should = chai.should();
-        global.expect = chai.expect
+        // global.assert = chai.assert
+        // global.should = chai.should();
+        // global.expect = chai.expect
     },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling

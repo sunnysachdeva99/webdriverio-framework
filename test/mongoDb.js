@@ -13,10 +13,10 @@ async function connect(){
        const collections = await db.collections();
        collections.forEach(c=> console.log(c.collectionName));
 
-       const jobExecution = db.collection('jobExecution');
-       const searchCurson = await jobExecution.find();
-       const result = await searchCurson.toArray();
-       console.table(result)
+       const person = db.collection('person');
+       const searchCurson = await person.find();
+       const persons = await searchCurson.toArray();
+       console.table(person)
        
 
     }catch(ex){
