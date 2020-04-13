@@ -18,7 +18,7 @@ class Car {
   }
 }
 
-var mycar = new Car(carname: "Tata");
+var mycar = new Car("Tata");
 
 document.getElementById("demo").innerHTML = mycar.carname;
 </script>
@@ -90,12 +90,12 @@ class Car {
 }
 
 class Model extends Car {
-  constructor(brand, mod) {
+  constructor(brand, color) {
     super(brand);
-    this.model = mod;
+    this.model = color;
   }
   show() {
-    return this.present() + ', it is a ' + this.model;
+    return this.present() + ', it is a ' + this.model+ 'color';
   }
 }
 

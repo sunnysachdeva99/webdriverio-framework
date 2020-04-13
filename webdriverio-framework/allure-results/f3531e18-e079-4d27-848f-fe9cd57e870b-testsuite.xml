@@ -1,0 +1,236 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586769995652' stop='1586770026345'>
+    <name>Launching Application</name>
+    <title>Launching Application</title>
+    <test-cases>
+        <test-case start='1586769995653' status='passed' stop='1586769995656'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769995656' status='undefined'>
+            <name>Open URL</name>
+            <title>Open URL</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769995657' status='passed' stop='1586770013261'>
+            <name>"before each" hook</name>
+            <title>"before each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586769995778' status='passed' stop='1586770002890'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770002987' status='passed' stop='1586770003002'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770003021' status='passed' stop='1586770003029'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770003039' status='passed' stop='1586770003152'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770008161' status='passed' stop='1586770008165'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770008188' status='passed' stop='1586770008260'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770013261' status='passed' stop='1586770013262'>
+            <name>"after each" hook</name>
+            <title>"after each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770013262' status='undefined'>
+            <name>Get Application Logo </name>
+            <title>Get Application Logo </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770013262' status='passed' stop='1586770020149'>
+            <name>"before each" hook</name>
+            <title>"before each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586770013375' status='passed' stop='1586770015044'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770015114' status='passed' stop='1586770015133'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770015143' status='passed' stop='1586770015148'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770020150' status='passed' stop='1586770020150'>
+            <name>"after each" hook</name>
+            <title>"after each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770020150' status='undefined'>
+            <name>Get Result count </name>
+            <title>Get Result count </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770020150' status='passed' stop='1586770026338'>
+            <name>"before each" hook</name>
+            <title>"before each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586770020172' status='passed' stop='1586770021193'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770021305' status='passed' stop='1586770021315'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586770021332' status='passed' stop='1586770021337'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770026339' status='passed' stop='1586770026340'>
+            <name>"after each" hook</name>
+            <title>"after each" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586770026341' status='passed' stop='1586770026343'>
+            <name>"after all" hook</name>
+            <title>"after all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

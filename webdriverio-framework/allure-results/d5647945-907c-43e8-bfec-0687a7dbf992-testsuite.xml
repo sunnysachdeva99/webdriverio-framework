@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586774632572' stop='1586774685507'>
+    <name>Get text scenario: </name>
+    <title>Get text scenario: </title>
+    <test-cases>
+        <test-case start='1586774632573' status='passed' stop='1586774685505'>
+            <name>Print Text</name>
+            <title>Print Text</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586774632700' status='passed' stop='1586774675405'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586774680431' status='passed' stop='1586774680448'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586774680493' status='passed' stop='1586774680502'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

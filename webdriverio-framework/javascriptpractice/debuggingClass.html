@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Debugging the code</title>
+</head>
+<body>
+
+	<input id="t1" type="text"></input>
+	<br />
+	<input id="t2" type="text"></input>
+	<br />
+	<button id="button" onClick=addValues()>Add</button>
+	<br/>
+	<h2 id="op">Result =</h2>
+
+</body>
+<script>
+	function addValues(){
+		var a = document.getElementById('t1').value;
+		var b = document.getElementById('t2').value;
+		// document.getElementById('op').innerHTML=(a+b);
+		console.log(a+b);
+	}	
+</script>
+</html>

@@ -1,0 +1,152 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586769279670' stop='1586769321827'>
+    <name>Launching Application</name>
+    <title>Launching Application</title>
+    <test-cases>
+        <test-case start='1586769279670' status='passed' stop='1586769279926'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769279926' status='passed' stop='1586769302309'>
+            <name>Open URL</name>
+            <title>Open URL</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586769281841' status='passed' stop='1586769291903'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769292050' status='passed' stop='1586769292066'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769292082' status='passed' stop='1586769292089'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769292109' status='passed' stop='1586769292216'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769297220' status='passed' stop='1586769297222'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769297232' status='passed' stop='1586769297306'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769302310' status='passed' stop='1586769315790'>
+            <name>Get Application Logo </name>
+            <title>Get Application Logo </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586769309040' status='passed' stop='1586769310581'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769310612' status='passed' stop='1586769310696'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769310779' status='passed' stop='1586769310787'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769315791' status='passed' stop='1586769321825'>
+            <name>Get Result count </name>
+            <title>Get Result count </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps>
+                <step start='1586769315800' status='passed' stop='1586769316781'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769316807' status='passed' stop='1586769316810'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1586769316815' status='passed' stop='1586769316823'>
+                    <name>undefined undefined</name>
+                    <title>undefined undefined</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1586769321825' status='passed' stop='1586769321826'>
+            <name>"after all" hook</name>
+            <title>"after all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

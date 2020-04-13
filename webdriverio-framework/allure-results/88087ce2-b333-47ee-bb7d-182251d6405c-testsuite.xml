@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586776034368' stop='1586776094492'>
+    <name>test commands scenario---</name>
+    <title>test commands scenario---</title>
+    <test-cases>
+        <test-case start='1586776034369' status='broken' stop='1586776094487'>
+            <name>Executing-----</name>
+            <title>Executing-----</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\test\webdrivercommands.js)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\test\webdrivercommands.js)
+                    at Test.Runnable._timeoutError (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\mocha\lib\runnable.js:463:10)
+                    at Timeout.&lt;anonymous> (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\mocha\lib\runnable.js:267:24)
+                    at listOnTimeout (internal/timers.js:549:17)
+                    at processTimers (internal/timers.js:492:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586445936072' stop='1586445936077'>
+    <name>String Assertions of Chai: Number Assertions of chai</name>
+    <title>String Assertions of Chai: Number Assertions of chai</title>
+    <test-cases>
+        <test-case start='1586445936072' status='failed' stop='1586445936076'>
+            <name>different type of number assertions</name>
+            <title>different type of number assertions</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected '123' to be a number</message>
+                <stack-trace>AssertionError: expected '123' to be a number
+                    at Context.&lt;anonymous> (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\javascriptpractice\chaiLibraries.js:17:25)
+                    at Context.executeSync (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:56:18)
+                    at D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

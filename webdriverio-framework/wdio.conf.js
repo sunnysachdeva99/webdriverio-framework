@@ -17,11 +17,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/*.js'
+        './javascriptpractice/**/inheritanceClass.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './test/**/baseclass.js', './test/**/header.js'
     ],
     //
     // ============
@@ -124,19 +124,23 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: true,
-    }]],
+    // reporters: ['spec'],
+    reporters: ['allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: true,
+            useCucumberStepReporter: false
+        }
+    },
  
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 6000000
     },
     //
     // =====

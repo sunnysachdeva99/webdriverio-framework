@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586444805630' stop='1586444805655'>
+    <name>Assertions of Chai</name>
+    <title>Assertions of Chai</title>
+    <test-cases>
+        <test-case start='1586444805631' status='failed' stop='1586444805654'>
+            <name>different type of assertions</name>
+            <title>different type of assertions</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected 'abc' not to be a string</message>
+                <stack-trace>AssertionError: expected 'abc' not to be a string
+                    at Context.&lt;anonymous> (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\javascriptpractice\chaiLibraries.js:8:29)
+                    at Context.executeSync (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:56:18)
+                    at D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

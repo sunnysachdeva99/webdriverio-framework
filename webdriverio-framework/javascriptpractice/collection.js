@@ -7,8 +7,8 @@ var mySet;
 
     mySet = new Set();
     mySet.add('Rama Reddy');
+    mySet.add(32);
     mySet.add('Gspann');
-    mySet.add('32');
     mySet.add('Hyd');
 
     console.log(mySet);
@@ -65,7 +65,7 @@ var mySet;
 
    var sayings = new Map();
     sayings.set('dog', 'woof');
-    sayings.set('cat', 'meow');
+    sayings.set('cat', 'woof');
     sayings.set('elephant', 'toot');
     console.log('Size : '+sayings.size); 
 

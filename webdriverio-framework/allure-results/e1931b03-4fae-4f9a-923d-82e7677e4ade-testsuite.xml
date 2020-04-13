@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1586447914128' stop='1586447914131'>
+    <name>data Type of assertions</name>
+    <title>data Type of assertions</title>
+    <test-cases>
+        <test-case start='1586447914128' status='failed' stop='1586447914131'>
+            <name>data types---</name>
+            <title>data types---</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-10.0.18363'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected false to be true</message>
+                <stack-trace>AssertionError: expected false to be true
+                    at Context.&lt;anonymous> (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\javascriptpractice\chaiLibraries.js:77:48)
+                    at Context.executeSync (D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:56:18)
+                    at D:\Java Script\Automation\webdriverio-framework\webdriverio-framework\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
