@@ -2,7 +2,8 @@ var baseUrl;
 if(process.env.SERVER ==='dev'){
     baseUrl='http://www.google.com'
 }else{
-    baseUrl='https://www.amazon.com/'
+    // baseUrl='https://www.amazon.com/'
+    baseUrl='http://webdriveruniversity.com'
 }
 
 exports.config = {
@@ -24,7 +25,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/*.js'
+        './mocha_hooks/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
