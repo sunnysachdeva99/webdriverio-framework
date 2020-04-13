@@ -4,7 +4,7 @@
   "description": "this is webdriver io script",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './specs/**/*.spec.js'"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "author": "Veera",
   "license": "ISC",
