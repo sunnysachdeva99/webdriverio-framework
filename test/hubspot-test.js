@@ -13,7 +13,7 @@ before(() => {
 });
 
 
-describe('log into account : ', () => {
+describe.skip('log into account : ', () => {
 
     var loginInputData = arrayData.getArrayObjectFromCSV('./test-data/hubspot-login-creds.csv');
     var loginObj = loginInputData[0];
@@ -33,7 +33,6 @@ describe('log into account : ', () => {
     });
 
     it('click on Log in button', () => {
-
         expect(hubspotSignUpPage._getLoginButton.isEnabled()).equals(true);
         hubspotSignUpPage._getLoginButton.click();
     });
@@ -43,15 +42,48 @@ describe('log into account : ', () => {
 
         // verify login failed error message
         hubspotSignUpPage._getLoginFailedHeading.waitForDisplayed();
-        expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("That email address doesn't exist.");
+        // expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("That email address doesn't exist.");
+        expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("There was a problem logging you in.");
+        
 
-        let errorMsg = "The email address you've entered doesn't appear to exist. Please check your entry and try again.";
-        hubspotSignUpPage._getLoginFailedErrorMsg.waitForDisplayed();
-        expect(hubspotSignUpPage._getLoginFailedErrorMsg.getText()).equals(errorMsg);
+        // let errorMsg = "The email address you've entered doesn't appear to exist. Please check your entry and try again.";
+        // hubspotSignUpPage._getLoginFailedErrorMsg.waitForDisplayed();
+        // expect(hubspotSignUpPage._getLoginFailedErrorMsg.getText()).equals(errorMsg);
     });
+
+    it.skip('should clear all fields', () => {
+
+        hubspotSignUpPage._getUserNameField.clearValue();
+        expect(hubspotSignUpPage._getUserNameField.getValue()).equals('');
+
+        hubspotSignUpPage._getPasswordField.clearValue();
+        expect(hubspotSignUpPage._getPasswordField.getValue()).equals('');
+        browser.pause(2000);
+    });
+
+    it.skip('should wait for the button be disabled', () => {
+        hubspotSignUpPage._getLoginButton.waitForEnabled(1000, true);
+        expect(hubspotSignUpPage._getLoginButton.isEnabled()).equals(false);
+        
+    });
+
+
+    it.skip('should wait for the button be enabled', () => {
+        let email = loginObj.email;
+        hubspotSignUpPage._getUserNameField.setValue(email);
+
+        let password = loginObj.password; 
+        hubspotSignUpPage._getPasswordField.setValue(password);
+
+        hubspotSignUpPage._getLoginButton.waitForEnabled(1000);
+        expect(hubspotSignUpPage._getLoginButton.isEnabled()).equals(true);
+    });
+
+    
+
 });
 
-describe.skip('register an account : ', () => {
+describe('register an account : ', () => {
     
     var signupInputData = arrayData.getArrayObjectFromCSV('./test-data/hubspot-signup-creds.csv');
     var signupObj = signupInputData[0];

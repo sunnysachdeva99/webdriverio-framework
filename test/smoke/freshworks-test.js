@@ -1,5 +1,5 @@
 // importing the page class by require
-const homePage = require("../pages/freshworks-homepage");
+const homePage = require("../../pages/freshworks-homepage");
 
 describe('home page elements handle', function () {
 

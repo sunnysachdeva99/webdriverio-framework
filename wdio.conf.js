@@ -28,14 +28,24 @@ exports.config = {
     specs: [
         './test/**/*.js'
     ],
+
+    suites: {
+        regression: ['./test/regression/*.js'],
+        smoke: ['./test/smoke/*.js']
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
-        './test/amazonsearch-test.js',
-        './test/blazepage-test.js',
-        './test/freshworks-test.js',
-        './test/herokuapp-test.js',
-        './test/multiple-env.js'
+
+        './test/regression/*.js',
+        './test/smoke/*.js',
+        './test/multiple-env.js',
+        // './test/hubspot-test.js'
+
+        // './test/freshworks-test.js',
+        // './test/herokuapp-test.js',
+        // './test/multiple-env.js'
     ],
     //
     // ============
@@ -139,7 +149,11 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec', ['allure', { outputDir: 'allure-results' }]],
+    reporters: ['spec', ['allure', { 
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
 
     //
     // Options to be passed to Mocha.

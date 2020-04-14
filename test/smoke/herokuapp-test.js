@@ -1,4 +1,4 @@
-const herokuappPage = require('../pages/herokuapp-homepage');
+const herokuappPage = require('../../pages/herokuapp-homepage');
 
 
 describe('handle elements', function () {
