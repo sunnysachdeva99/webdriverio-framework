@@ -1,3 +1,12 @@
+/*const url = require('./envurls')
+const ENV = process.env.ENV
+console.log(ENV)
+if(!ENV || !['qa', 'dev', 'stage', 'prod'].includes(ENV))
+{
+    console.log('Please pass the correct ENV value: ENV=qa|dev|stage|prod')
+    process.exit()
+}*/
+
 exports.config = {
     //
     // ====================
@@ -17,7 +26,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/home.elements.js'
+        './test/**/readTestData.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -89,7 +98,8 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://www.amazon.com',
+    baseUrl: 'the-internet.herokuapp.com',
+    //baseUrl: url[process.env.ENV],
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
