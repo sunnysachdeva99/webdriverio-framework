@@ -1,0 +1,39 @@
+{
+  "name": "webdriverio-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnysachdeva99/webdriverio-framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunnysachdeva99/webdriverio-framework/issues"
+  },
+  "homepage": "https://github.com/sunnysachdeva99/webdriverio-framework#readme",
+  "devDependencies": {
+    "@wdio/local-runner": "^6.0.15",
+    "@wdio/mocha-framework": "^6.0.15",
+    "@wdio/selenium-standalone-service": "^6.0.15",
+    "@wdio/spec-reporter": "^6.0.14",
+    "@wdio/sync": "^6.0.15",
+    "chai": "^4.2.0",
+    "chromedriver": "^80.0.2",
+    "local-runner": "^0.1.1-alpha",
+    "wdio-allure-reporter": "^0.8.3",
+    "wdio-chromedriver-service": "^6.0.1",
+    "webdriverio": "^6.0.15"
+  },
+  "dependencies": {
+    "@wdio/cli": "^6.0.15",
+    "immutable": "^4.0.0-rc.12"
+  },
+  "description": ""
+}
