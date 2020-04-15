@@ -6,8 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "regression": "./node_modules/.bin/wdio wdio.conf.js",
-    "smoke": "./node_modules/.bin/wdio wdio.conf.js",
-    "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter"
+    "smoke": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -31,8 +30,7 @@
     "chromedriver": "^80.0.1",
     "local-runner": "^0.1.1-alpha",
     "wdio-chromedriver-service": "^5.0.2",
-    "webdriverio": "^6.0.9",
-    "mocha-bamboo-reporter": "*"
+    "webdriverio": "^6.0.9"
   },
   "dependencies": {
     "@wdio/cli": "^6.0.9",
