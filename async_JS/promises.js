@@ -29,16 +29,17 @@ function createPost(post){
             },2000);
     });
 }
+createPost();
+getPosts();
 
+//Using Then
 // createPost({ title: "post three", desc:"this is post three"})
 // .then(getPosts)
 // .catch(err => console.log(err));
 
 // Async Await
-
-async function init(){
-    await createPost({ title: "post three", desc:"this is post three"});
-    getPosts();
-}
-
-init();
+// async function init(){
+//     await createPost({ title: "post three", desc:"this is post three"});
+//     getPosts();
+// }
+// init();

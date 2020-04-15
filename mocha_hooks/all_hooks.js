@@ -1,28 +1,28 @@
-// before(function() {
-//     console.log("'before' root-level pre-hook")
-// });
-// after(function() {
-//     console.log("'after' root-level post-hooks")
-// });
-// beforeEach(function() {
-//     console.log("'beforeEach' root-level pre-hook")
-// });
-// afterEach(function() {
-//     console.log("'afterEach' root-level post-hooks")
-// });
+before(function() {
+    console.log("'before' root-level pre-hook")
+});
+after(function() {
+    console.log("'after' root-level post-hooks")
+});
+beforeEach(function() {
+    console.log("'beforeEach' root-level pre-hook")
+});
+afterEach(function() {
+    console.log("'afterEach' root-level post-hooks")
+});
 describe("all_hooks.JS - This is Describe block1", function() {
-    // before(function() {
-    //     console.log("'before' pre-hook inside Describe block1")
-    // });
-    // after(function() {
-    //     console.log("'after' post-hooks Describe block1")
-    // });
-    // beforeEach(function() {
-    //     console.log("'beforeEach' block1-level pre-hook")
-    // });
-    // afterEach(function() {
-    //     console.log("'afterEach' block1-level post-hooks")
-    // });
+    before(function() {
+        console.log("'before' pre-hook inside Describe block1")
+    });
+    after(function() {
+        console.log("'after' post-hooks Describe block1")
+    });
+    beforeEach(function() {
+        console.log("'beforeEach' block1-level pre-hook")
+    });
+    afterEach(function() {
+        console.log("'afterEach' block1-level post-hooks")
+    });
     it("it1 block1", function() {
         console.log("=====block1 test1=======")
     })
@@ -31,12 +31,12 @@ describe("all_hooks.JS - This is Describe block1", function() {
     })
 });
 describe("all_hooks.JS - This is Describe block2", function() {
-    // before(function() {
-    //     console.log("'before' pre-hook inside Describe block2")
-    // });
-    // after(function() {
-    //     console.log("'after' post-hooks Describe block2")
-    // });
+    before(function() {
+        console.log("'before' pre-hook inside Describe block2")
+    });
+    after(function() {
+        console.log("'after' post-hooks Describe block2")
+    });
     it("it1 block2", function() {
         console.log("=====block2 test1=======")
     });

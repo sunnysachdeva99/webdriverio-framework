@@ -13,7 +13,7 @@ describe("Test contact us page on webdriveruni", () => {
   async function getPerson(){
   try{
     await client.connect();
-    const db = client.db('loyaltybatchservices');
+    const db = await client.db('loyaltybatchservices');
     console.log('Connected to database '+db.databaseName);
     const collections = await db.collections();
     collections.forEach(c=> console.log(c.collectionName));

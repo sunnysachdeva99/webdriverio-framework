@@ -9,6 +9,7 @@ it.skip('Attemp to click the button asap', ()=>{
 it.only('Attemp to click the button after 7 seconds', function(){
     browser.url('http://webdriveruniversity.com/Ajax-Loader/index.html');
     browser.pause(7000);
+    browser.debug();
     $('#button1').click();
     browser.pause(2000);
 });

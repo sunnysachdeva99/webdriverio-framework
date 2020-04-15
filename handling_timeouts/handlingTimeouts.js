@@ -12,7 +12,7 @@ describe("Test the various WebdriverIO Wait Commands", () => {
 //       //Wait for an element for the provided amount of milliseconds to be present within the DOM.
 //       const clickMeButton = $("//span[@id='button1']/p[.='CLICK ME!']");
 //     //   browser.pause(5000);
-//       clickMeButton.waitForExist(10000);
+    //   clickMeButton.waitForExist(10000);
 //       clickMeButton.click();
 //     }); //test will fail... even though its in the DOM doesnt mean it clickable
   
