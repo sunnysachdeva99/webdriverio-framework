@@ -26,7 +26,10 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/readTestData.js'
+        //'./test/**/readTestData.js'
+        //'./test/**/urltest.js'
+
+        './test/**/blazetest.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -99,7 +102,11 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'the-internet.herokuapp.com',
+    //baseUrl: 'the-internet.herokuapp.com',
+
+    //this is for multi environment execution
     //baseUrl: url[process.env.ENV],
+
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -141,7 +148,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: process.env.DEBUG === 'true' ? 999999 : 60000
     },
     //
     // =====
