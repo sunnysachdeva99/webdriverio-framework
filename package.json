@@ -26,7 +26,10 @@
     "@wdio/sync": "^6.0.15",
     "chai": "^4.2.0",
     "chromedriver": "^80.0.2",
+    "d3": "^5.15.1",
+    "d3-fetch": "^1.1.2",
     "local-runner": "^0.1.1-alpha",
+    "node-fetch": "^2.6.0",
     "wdio-allure-reporter": "^0.8.3",
     "wdio-chromedriver-service": "^6.0.1",
     "webdriverio": "^6.0.15"

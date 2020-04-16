@@ -47,3 +47,66 @@ describe("WebDriver IO setup : ", function() {
         assert.include(browser.getTitle(), 'Twitter');
     });
 });
+
+ 
+describe.only("webdriver io - Selectors : ", function() {
+    it("check hyperlinks", function() {
+        browser.url("https://www.facebook.com");
+        browser.maximizeWindow()
+        //browser.findElement('')
+        $('=Forgotten account?').click()
+        browser.pause(1000)
+        browser.back()
+        browser.pause(1000)
+        $('*=Sign').click()
+        browser.pause(1000)
+        browser.back()
+        txt = $("div[class='mtm mbs _2_68']").getText()
+        browser.pause(1000)
+        browser.newWindow(txt)
+        browser.pause(1000)
+        assert.include(browser.getTitle(), 'Facebook');
+        
+    });
+
+    it('selecting radio and options, dropdowns', function(){
+        browser.url("https://www.facebook.com");
+        browser.maximizeWindow()
+        $('label[class="_58mt"]').click()
+        browser.pause(5000)
+    })
+    
+    it('selecting options, dropdowns', function(){
+        browser.url("https://www.facebook.com");
+        browser.maximizeWindow()
+        $('select#day').selectByVisibleText("1")
+        $('select#month').selectByIndex(9)
+        $('select#year').selectByVisibleText("1990")
+        browser.pause(3000)
+        //$('div#reg_form_box').$('input#u_0_r').setValue('12332434343')
+        browser.pause(5000)
+        console.log('Active Element : ', browser.getActiveElement())
+        console.log('isElementSelected : ', browser.isElementSelected(browser.getActiveElement().ELEMENT))
+        console.log('isElementSelected : ', browser.isElementDisplayed(browser.getActiveElement().ELEMENT))
+        console.log('Element Text : ', browser.getElementText(browser.getActiveElement().ELEMENT))
+        console.log('Element Tag : ', browser.getElementTagName(browser.getActiveElement().ELEMENT))
+        console.log('Element Enabled : ', browser.isElementEnabled(browser.getActiveElement().ELEMENT))
+        console.log('Element Click : ', browser.elementClick(browser.getActiveElement().ELEMENT))
+        console.log('Element Clear : ', browser.elementClear(browser.getActiveElement().ELEMENT))
+        console.log('Element Attribute : ', browser.getElementAttribute(browser.getActiveElement().ELEMENT, 'select'))
+        console.log('Page source : ', browser.getPageSource())
+        browser.takeScreenshot()
+    });
+
+    it.only('should wait until text has changed', () => {
+        browser.url("https://www.facebook.com");
+        browser.waitUntil(
+            () => $("div[class='mtm mbs _2_68']").getText() === 'Birthday',
+            {
+                timeout: 5000,
+                timeoutMsg: 'expected text to be different after 5s'
+            }
+        );
+    });
+    
+});
