@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sunnysachdeva99/webdriverio-framework#readme",
   "devDependencies": {
+    "@wdio/allure-reporter": "^6.0.14",
     "@wdio/local-runner": "^6.0.15",
     "@wdio/mocha-framework": "^6.0.15",
     "@wdio/selenium-standalone-service": "^6.0.15",
@@ -29,6 +30,7 @@
     "d3": "^5.15.1",
     "d3-fetch": "^1.1.2",
     "local-runner": "^0.1.1-alpha",
+    "mongodb": "^3.5.6",
     "node-fetch": "^2.6.0",
     "wdio-allure-reporter": "^0.8.3",
     "wdio-chromedriver-service": "^6.0.1",
