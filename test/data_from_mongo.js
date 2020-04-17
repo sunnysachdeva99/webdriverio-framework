@@ -16,7 +16,7 @@ describe("Test contact us page on webdriveruni", () => {
     const db = await client.db('loyaltybatchservices');
     console.log('Connected to database '+db.databaseName);
     const collections = await db.collections();
-    collections.forEach(c=> console.log(c.collectionName));
+    // collections.forEach(c=> console.log(c.collectionName));
 
     const person = db.collection('person');
     const searchCurson = await person.find();
