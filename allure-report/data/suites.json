@@ -1,0 +1,169 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "log into account : ",
+    "children" : [ {
+      "name" : "enter username",
+      "uid" : "a9f9d56edf50d2a3",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014880747,
+        "stop" : 1587014881564,
+        "duration" : 817
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "enter password",
+      "uid" : "8763d62b2861ac44",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014881564,
+        "stop" : 1587014881655,
+        "duration" : 91
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "click on Log in button",
+      "uid" : "723d39ed62d0fe37",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014881656,
+        "stop" : 1587014881765,
+        "duration" : 109
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "verify error message",
+      "uid" : "b0b3c793517d243e",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014881766,
+        "stop" : 1587014883799,
+        "duration" : 2033
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "should wait for the button be disabled",
+      "uid" : "64636d01bf5b6407",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1587014883799,
+        "stop" : 1587014883799,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should clear all fields",
+      "uid" : "c2f0d8505b9aa96d",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1587014883799,
+        "stop" : 1587014883799,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should wait for the button be enabled",
+      "uid" : "21278e8d8bf1a1b4",
+      "parentUid" : "35f4028c8ecf0322406e66ce34aada64",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1587014883799,
+        "stop" : 1587014883799,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "35f4028c8ecf0322406e66ce34aada64"
+  }, {
+    "name" : "register an account : ",
+    "children" : [ {
+      "name" : "enter firstname",
+      "uid" : "e6356e47da27caf4",
+      "parentUid" : "ff66580d1c54158c1fa55b0b6759e1d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014883808,
+        "stop" : 1587014885607,
+        "duration" : 1799
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "enter lastname",
+      "uid" : "c735a960d02f9f3d",
+      "parentUid" : "ff66580d1c54158c1fa55b0b6759e1d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014885607,
+        "stop" : 1587014885700,
+        "duration" : 93
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "enter email address",
+      "uid" : "e2dbbe5934016e61",
+      "parentUid" : "ff66580d1c54158c1fa55b0b6759e1d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014885700,
+        "stop" : 1587014885977,
+        "duration" : 277
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "click on Next button",
+      "uid" : "857a0631bf35660a",
+      "parentUid" : "ff66580d1c54158c1fa55b0b6759e1d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014885977,
+        "stop" : 1587014888038,
+        "duration" : 2061
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    }, {
+      "name" : "verify confirmation message",
+      "uid" : "5a60b39f9fbc4a97",
+      "parentUid" : "ff66580d1c54158c1fa55b0b6759e1d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587014888039,
+        "stop" : 1587014891072,
+        "duration" : 3033
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-19.2.0" ]
+    } ],
+    "uid" : "ff66580d1c54158c1fa55b0b6759e1d1"
+  } ]
+}

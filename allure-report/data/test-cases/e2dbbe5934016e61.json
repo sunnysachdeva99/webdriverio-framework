@@ -1,0 +1,58 @@
+{
+  "uid" : "e2dbbe5934016e61",
+  "name" : "enter email address",
+  "fullName" : "register an account : .enter email address",
+  "historyId" : "c202fc4b290f3e33afa6747bd6f60113",
+  "time" : {
+    "start" : 1587014885700,
+    "stop" : 1587014885977,
+    "duration" : 277
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "register an account : "
+  }, {
+    "name" : "testClass",
+    "value" : "register an account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "enter email address"
+  }, {
+    "name" : "package",
+    "value" : "register an account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-19.2.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e2dbbe5934016e61.json",
+  "parameterValues" : [ "Chrome-19.2.0" ]
+}

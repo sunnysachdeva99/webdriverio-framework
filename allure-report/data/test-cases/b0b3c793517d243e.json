@@ -1,0 +1,58 @@
+{
+  "uid" : "b0b3c793517d243e",
+  "name" : "verify error message",
+  "fullName" : "log into account : .verify error message",
+  "historyId" : "f42a357a211dd8412b9086e0154a9aaf",
+  "time" : {
+    "start" : 1587014881766,
+    "stop" : 1587014883799,
+    "duration" : 2033
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "log into account : "
+  }, {
+    "name" : "testClass",
+    "value" : "log into account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "verify error message"
+  }, {
+    "name" : "package",
+    "value" : "log into account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-19.2.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b0b3c793517d243e.json",
+  "parameterValues" : [ "Chrome-19.2.0" ]
+}

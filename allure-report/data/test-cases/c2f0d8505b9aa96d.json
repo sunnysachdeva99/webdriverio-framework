@@ -1,0 +1,48 @@
+{
+  "uid" : "c2f0d8505b9aa96d",
+  "name" : "should clear all fields",
+  "fullName" : "log into account : .should clear all fields",
+  "historyId" : "e5b4fce59c9c333789078bbaac404971",
+  "time" : {
+    "start" : 1587014883799,
+    "stop" : 1587014883799,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "log into account : "
+  }, {
+    "name" : "testClass",
+    "value" : "log into account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "should clear all fields"
+  }, {
+    "name" : "package",
+    "value" : "log into account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c2f0d8505b9aa96d.json",
+  "parameterValues" : [ ]
+}

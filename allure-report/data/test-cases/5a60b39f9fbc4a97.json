@@ -1,0 +1,58 @@
+{
+  "uid" : "5a60b39f9fbc4a97",
+  "name" : "verify confirmation message",
+  "fullName" : "register an account : .verify confirmation message",
+  "historyId" : "55ec4434ffac71e1c87fbfc745823c29",
+  "time" : {
+    "start" : 1587014888039,
+    "stop" : 1587014891072,
+    "duration" : 3033
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "register an account : "
+  }, {
+    "name" : "testClass",
+    "value" : "register an account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "verify confirmation message"
+  }, {
+    "name" : "package",
+    "value" : "register an account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-19.2.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5a60b39f9fbc4a97.json",
+  "parameterValues" : [ "Chrome-19.2.0" ]
+}

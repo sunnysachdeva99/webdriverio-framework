@@ -13,7 +13,7 @@ before(() => {
 });
 
 
-describe.skip('log into account : ', () => {
+describe('log into account : ', () => {
 
     var loginInputData = arrayData.getArrayObjectFromCSV('./test-data/hubspot-login-creds.csv');
     var loginObj = loginInputData[0];
@@ -42,8 +42,8 @@ describe.skip('log into account : ', () => {
 
         // verify login failed error message
         hubspotSignUpPage._getLoginFailedHeading.waitForDisplayed();
-        // expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("That email address doesn't exist.");
-        expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("There was a problem logging you in.");
+        expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("That email address doesn't exist.");
+        // expect(hubspotSignUpPage._getLoginFailedHeading.getText()).equals("There was a problem logging you in.");
         
 
         // let errorMsg = "The email address you've entered doesn't appear to exist. Please check your entry and try again.";
@@ -90,7 +90,6 @@ describe('register an account : ', () => {
     var firstName = '';
     it('enter firstname', () => {
         hubspotSignUpPage._getSignUpLink.click();
-        // browser.pause(2000);
         // firstName = registerData.firstName; // data from JS file
         firstName = signupObj.firstName;  // data from CSV file
         hubspotSignUpPage._getFirstNameField.setValue(firstName);

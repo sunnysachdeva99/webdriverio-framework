@@ -1,0 +1,121 @@
+[ {
+  "uid" : "a9f9d56edf50d2a3",
+  "name" : "enter username",
+  "time" : {
+    "start" : 1587014880747,
+    "stop" : 1587014881564,
+    "duration" : 817
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8763d62b2861ac44",
+  "name" : "enter password",
+  "time" : {
+    "start" : 1587014881564,
+    "stop" : 1587014881655,
+    "duration" : 91
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "64636d01bf5b6407",
+  "name" : "should wait for the button be disabled",
+  "time" : {
+    "start" : 1587014883799,
+    "stop" : 1587014883799,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "c2f0d8505b9aa96d",
+  "name" : "should clear all fields",
+  "time" : {
+    "start" : 1587014883799,
+    "stop" : 1587014883799,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "21278e8d8bf1a1b4",
+  "name" : "should wait for the button be enabled",
+  "time" : {
+    "start" : 1587014883799,
+    "stop" : 1587014883799,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "e6356e47da27caf4",
+  "name" : "enter firstname",
+  "time" : {
+    "start" : 1587014883808,
+    "stop" : 1587014885607,
+    "duration" : 1799
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e2dbbe5934016e61",
+  "name" : "enter email address",
+  "time" : {
+    "start" : 1587014885700,
+    "stop" : 1587014885977,
+    "duration" : 277
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "857a0631bf35660a",
+  "name" : "click on Next button",
+  "time" : {
+    "start" : 1587014885977,
+    "stop" : 1587014888038,
+    "duration" : 2061
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0b3c793517d243e",
+  "name" : "verify error message",
+  "time" : {
+    "start" : 1587014881766,
+    "stop" : 1587014883799,
+    "duration" : 2033
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a60b39f9fbc4a97",
+  "name" : "verify confirmation message",
+  "time" : {
+    "start" : 1587014888039,
+    "stop" : 1587014891072,
+    "duration" : 3033
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "723d39ed62d0fe37",
+  "name" : "click on Log in button",
+  "time" : {
+    "start" : 1587014881656,
+    "stop" : 1587014881765,
+    "duration" : 109
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c735a960d02f9f3d",
+  "name" : "enter lastname",
+  "time" : {
+    "start" : 1587014885607,
+    "stop" : 1587014885700,
+    "duration" : 93
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
