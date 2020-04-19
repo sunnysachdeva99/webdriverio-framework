@@ -8,5 +8,9 @@
     "host": "192.168.100.5",
     "hub": "http://192.168.100.5:4444",
     "browserName": "chrome",
-    "webdriver.chrome.driver": "/WebdriverUI-SeleniumGrid/grid-config/chromedriver"
+    "webdriver.chrome.driver": "./selenium-grid/chromedriver"
+    
+    
   }
+
+  

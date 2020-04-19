@@ -8,5 +8,5 @@
     "host": "192.168.100.5",
     "hub": "http://192.168.100.5:4444",
     "browserName": "firefox",
-    "webdriver.gecko.driver": "/WebdriverUI-SeleniumGrid/grid-config/geckodriver"
+    "webdriver.gecko.driver": "./selenium-grid/geckodriver"
   }
