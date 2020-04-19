@@ -1,0 +1,58 @@
+{
+  "uid" : "1db4582abfc8287e",
+  "name" : "enter password",
+  "fullName" : "log into account : .enter password",
+  "historyId" : "81b09b582d5e0cf142966c26ad57dde6",
+  "time" : {
+    "start" : 1587306094949,
+    "stop" : 1587306095141,
+    "duration" : 192
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "log into account : "
+  }, {
+    "name" : "testClass",
+    "value" : "log into account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "enter password"
+  }, {
+    "name" : "package",
+    "value" : "log into account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1db4582abfc8287e.json",
+  "parameterValues" : [ "chrome" ]
+}

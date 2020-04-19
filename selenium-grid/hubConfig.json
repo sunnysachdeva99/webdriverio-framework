@@ -1,0 +1,8 @@
+{
+    "_comment": "Configuration for Hub - hubConfig.json",
+    "nodePolling": 180000,
+    "timeout": 300000,
+    "port": 4444,
+    "role": "hub",
+    "log": "./logs/seleniumHubLogs.log"
+  }

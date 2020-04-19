@@ -1,5 +1,5 @@
 {
-  "total" : 2,
+  "total" : 3,
   "items" : [ {
     "uid" : "ff66580d1c54158c1fa55b0b6759e1d1",
     "name" : "register an account : ",
@@ -21,6 +21,17 @@
       "passed" : 4,
       "unknown" : 0,
       "total" : 7
+    }
+  }, {
+    "uid" : "ca10075610c5effafa172c4be29939e1",
+    "name" : "handle elements",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
     }
   } ]
 }

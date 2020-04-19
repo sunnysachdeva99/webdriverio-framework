@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "regression": "./node_modules/.bin/wdio wdio.conf.js",
-    "smoke": "./node_modules/.bin/wdio wdio.conf.js"
+    "bvt": "./node_modules/.bin/wdio wdio.conf.js --suite bvt",
+    "regression": "./node_modules/.bin/wdio wdio.conf.js --suite regression",
+    "sanity": "./node_modules/.bin/wdio wdio.conf.js --suite sanity",
+    "smoke": "./node_modules/.bin/wdio wdio.conf.js --suite smoke"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,7 @@
     "@wdio/cli": "^6.0.9",
     "csv-parser": "^2.3.2",
     "csv-writer": "^1.6.0",
+    "dotenv": "^8.2.0",
     "fast-csv": "^4.1.3",
     "file-system": "^2.2.2",
     "mongodb": "^3.5.5",

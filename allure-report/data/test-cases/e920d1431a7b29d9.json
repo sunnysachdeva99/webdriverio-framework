@@ -1,0 +1,48 @@
+{
+  "uid" : "e920d1431a7b29d9",
+  "name" : "should wait for the button be enabled",
+  "fullName" : "log into account : .should wait for the button be enabled",
+  "historyId" : "2528e212d7fc00db7493cecfaa08b089",
+  "time" : {
+    "start" : 1587306097503,
+    "stop" : 1587306097503,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "log into account : "
+  }, {
+    "name" : "testClass",
+    "value" : "log into account : "
+  }, {
+    "name" : "testMethod",
+    "value" : "should wait for the button be enabled"
+  }, {
+    "name" : "package",
+    "value" : "log into account : "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e920d1431a7b29d9.json",
+  "parameterValues" : [ ]
+}

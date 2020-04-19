@@ -1,3 +1,4 @@
+require('dotenv').config()
 const url = require('./urls')
 const ENV = process.env.ENV
 
@@ -5,7 +6,6 @@ if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
     console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
     process.exit();
 }
-
 
 exports.config = {
     //
@@ -17,6 +17,48 @@ exports.config = {
     // on a remote machine).
     runner: 'local',
     //
+
+    // =====================
+    // Server Configurations
+    // =====================
+    // Host address of the running Selenium server. This information is usually obsolete, as
+    // WebdriverIO automatically connects to localhost. Also if you are using one of the
+    // supported cloud services like Sauce Labs, Browserstack, Testing Bot or LambdaTest, you also don't
+    // need to define host and port information (because WebdriverIO can figure that out
+    // from your user and key information). However, if you are using a private Selenium
+    // backend, you should define the `hostname`, `port`, and `path` here.
+
+    // Override default path ('/wd/hub') for chromedriver service.
+    hostname: process.env.GRID_HOST,
+    port: Number(process.env.GRID_PORT),
+    path: process.env.GRID_PATH,
+    
+    // hostname: '192.168.100.5',
+    // hostname: 'localhost',
+    // port: 4444,
+    // path: '/wd/hub',
+
+    // Protocol: http | https
+    // protocol: 'http',
+    //
+    // =================
+    // Service Providers
+    // =================
+    // WebdriverIO supports Sauce Labs, Browserstack, Testing Bot and LambdaTest. (Other cloud providers
+    // should work, too.) These services define specific `user` and `key` (or access key)
+    // values you must put here, in order to connect to these services.
+    //
+    // user: 'webdriverio',
+    // key:  'xxxxxxxxxxxxxxxx-xxxxxx-xxxxx-xxxxxxxxx',
+    //
+    // If you run your tests on SauceLabs you can specify the region you want to run your tests
+    // in via the `region` property. Available short handles for regions are `us` (default) and `eu`.
+    // These regions are used for the Sauce Labs VM cloud and the Sauce Labs Real Device Cloud.
+    // If you don't provide the region, it defaults to `us`.
+    // region: 'us',
+    //
+
+
     // ==================
     // Specify Test Files
     // ==================
@@ -30,22 +72,17 @@ exports.config = {
     ],
 
     suites: {
-        regression: ['./test/regression/*.js'],
-        smoke: ['./test/smoke/*.js']
+        bvt: ['./test-suites/bvt/*.js'],
+        regression: ['./test-suites/regression/*.js'],
+        sanity: ['./test-suites/sanity/*.js'],
+        smoke: ['./test-suites/smoke/*.js']
     },
 
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
 
-        './test/regression/*.js',
-        './test/smoke/*.js',
         './test/multiple-env.js',
-        // './test/hubspot-test.js'
-
-        // './test/freshworks-test.js',
-        // './test/herokuapp-test.js',
-        // './test/multiple-env.js'
     ],
     //
     // ============
@@ -74,14 +111,29 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 2,
         //
         browserName: 'chrome',
+        "goog:chromeOptions": {
+            // to run chrome headless the following flags are required
+            // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
+            // args: ['--headless', '--disable-gpu'],       
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+
+    }
+    // ,{
+    //     maxInstances: 1,
+    //     browserName: 'firefox',
+    //     "moz:firefoxOptions": {
+    //         // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+    //         // args: ['-headless']
+    //     }
+    // }
+    ],
     //
     // ===================
     // Test Configurations
@@ -149,7 +201,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec', ['allure', { 
+    reporters: ['spec', ['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,

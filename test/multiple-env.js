@@ -16,6 +16,6 @@ describe('handle elements', function () {
     it('verify ENV URL', function () {
         browser.url('/');
         console.log('Env URL: ' + browser.getUrl());
-        expect(browser.getUrl()).equals(`${browser.options.baseUrl}/`);
+        expect(browser.getUrl()).equals(`${browser.options.baseUrl}/home-beta`);
     });
 });
