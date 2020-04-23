@@ -4,6 +4,7 @@
   "description": "WebdriverIO Initial App Test",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "bvt": "./node_modules/.bin/wdio wdio.conf.js --suite bvt",
     "regression": "./node_modules/.bin/wdio wdio.conf.js --suite regression",
@@ -14,6 +15,16 @@
     "type": "git",
     "url": "git+https://github.com/sunnysachdeva99/webdriverio-framework.git"
   },
+  "keywords": [
+    "supertest",
+    "mocha",
+    "chai",
+    "express",
+    "allure report",
+    "dotnav",
+    "wdio",
+    "selenium-grid"
+  ],
   "author": "SumantaKumar",
   "license": "ISC",
   "bugs": {
@@ -31,6 +42,7 @@
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^80.0.1",
     "local-runner": "^0.1.1-alpha",
+    "supertest": "^4.0.2",
     "wdio-chromedriver-service": "^5.0.2",
     "webdriverio": "^6.0.9"
   },
@@ -39,8 +51,10 @@
     "csv-parser": "^2.3.2",
     "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "fast-csv": "^4.1.3",
     "file-system": "^2.2.2",
+    "mocha": "^7.1.1",
     "mongodb": "^3.5.5",
     "mysql": "^2.18.1"
   }

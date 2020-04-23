@@ -82,7 +82,11 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
 
-        './test/multiple-env.js',
+        //API Test
+        // './test/api-test.js', 
+
+        //UI Test
+        './test/hubspot-test.js'
     ],
     //
     // ============
@@ -106,7 +110,8 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
+    capabilities: [
+        {
 
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
@@ -125,7 +130,7 @@ exports.config = {
         // excludeDriverLogs: ['bugreport', 'server'],
 
     }
-    // ,{
+    // // ,{
     //     maxInstances: 1,
     //     browserName: 'firefox',
     //     "moz:firefoxOptions": {
