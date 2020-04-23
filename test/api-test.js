@@ -18,7 +18,7 @@ describe('verify API Calls', () => {
 
         expect(res.body.status).equal(201);
         console.log('======== POST Call Reponse Details ======');
-        console.log(res.body.status, res.body.usermsg);
+        console.log(res.body.status, ","+res.body.usermsg);
         let resource = res.body.responsePayload;
         console.log('Resource Details: ', resource);
       });
