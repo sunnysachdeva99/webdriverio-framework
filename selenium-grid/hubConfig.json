@@ -3,6 +3,5 @@
     "nodePolling": 180000,
     "timeout": 300000,
     "port": 4444,
-    "role": "hub",
-    "log": "./logs/seleniumHubLogs.log"
+    "role": "hub"
   }

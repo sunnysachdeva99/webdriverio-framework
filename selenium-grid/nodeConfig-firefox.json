@@ -1,12 +1,9 @@
 {
     "_comment": "Configuration for Node-Firefox - nodeConfig-firefox.json",
-    "port": 5555,
+    "port": 6666,
     "role": "node",
-    "log": "./logs/seleniumNodeLogs.log",
     "browserTimeout": 180,
     "timeout": 180,
-    "host": "192.168.100.5",
-    "hub": "http://192.168.100.5:4444",
-    "browserName": "firefox",
-    "webdriver.gecko.driver": "./selenium-grid/geckodriver"
+    "host": "localhost",
+    "hub": "http://localhost:4444"
   }
