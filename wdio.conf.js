@@ -29,8 +29,8 @@ exports.config = {
     // backend, you should define the `hostname`, `port`, and `path` here.
 
     // Override default path ('/wd/hub') for chromedriver service.
-    hostname: process.env.GRID_HOST,
-    port: Number(process.env.GRID_PORT),
+    // hostname: process.env.GRID_HOST,
+    // port: Number(process.env.GRID_PORT),
     // path: process.env.GRID_PATH,
 
     // hostname: '192.168.100.5',
@@ -73,7 +73,7 @@ exports.config = {
     ],
 
     suites: {
-        bvt: ['./test-suites/bvt/*.js'],
+        applitools: ['./test-suites/applitools/*.js'],
         regression: ['./test-suites/regression/*.js'],
         sanity: ['./test-suites/sanity/*.js'],
         smoke: ['./test-suites/smoke/*.js']

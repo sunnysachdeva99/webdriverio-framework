@@ -3,6 +3,9 @@
 var request = require('supertest');
 var app = require('../server');
 
+before(() => {
+  browser.closeWindow();
+});
 
 describe('verify API Calls', () => {
 
