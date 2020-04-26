@@ -13,7 +13,7 @@ describe('DemoApp - Original', function () {
       eyes = new Eyes();
   
       // Add your API key (the API key can be set via APPLITOOLS_API_KEY env variable)
-      eyes.setApiKey('MhU9BBx104MxNLk110dhRNqLXtZfZTiALYytVUna0facpFc110'); // 👈🏼 REPLACE ME!
+      eyes.setApiKey('APPLITOOLS_API_KEY'); // 👈🏼 REPLACE ME!
   
       // Use Chrome browser
       driver = await new Builder()
