@@ -23,7 +23,8 @@
     "allure report",
     "dotnav",
     "wdio",
-    "selenium-grid"
+    "selenium-grid",
+    "visual-regression"
   ],
   "author": "SumantaKumar",
   "license": "ISC",
@@ -44,6 +45,7 @@
     "local-runner": "^0.1.1-alpha",
     "supertest": "^4.0.2",
     "wdio-chromedriver-service": "^6.0.2",
+    "wdio-image-comparison-service": "^1.13.1",
     "webdriverio": "^6.1.3"
   },
   "dependencies": {

@@ -1,4 +1,5 @@
 require('dotenv').config()
+const { join } = require('path');
 const url = require('./urls')
 const ENV = process.env.ENV
 
@@ -87,7 +88,7 @@ exports.config = {
         './test/api-test.js', 
 
         //UI Test
-        // './test/hubspot-test.js'
+        // './test/hubspot-test.js',
     ],
     //
     // ============
@@ -188,7 +189,22 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver', 'geckodriver'],
+    services: ['chromedriver', 'geckodriver',
+
+        ['image-comparison',
+            // The options
+            {
+                // Some options, see the docs for more
+                baselineFolder: join(process.cwd(), './images/baseline/'),
+                formatImageName: '{tag}-{logName}-{width}x{height}',
+                screenshotPath: join(process.cwd(), '.tmp/'),
+                savePerInstance: true,
+                autoSaveBaseline: true,
+                blockOutStatusBar: true,
+                blockOutToolBar: true,
+                // ... more options
+            }]
+    ],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
