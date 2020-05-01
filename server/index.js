@@ -9,8 +9,8 @@ var jsonParser = bodyParser.json()
 
 var users =
   [
-    { "id": "101", "name": "John", "email": "john@gmail.com" },
-    { "id": "102", "name": "Harry", "email": "harry@gmail.com" }
+    { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser"},
+    { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser"}
   ];
 
 // GET Call
@@ -28,7 +28,5 @@ app.post('/api/createUser', jsonParser, function (req, res) {
   users[users.length] = req.body;
   res.json({ "error": false, "status": 201, "message": "Success", "usermsg": "Resource created successfully", "responsePayload": req.body });
 });
-
-
 
 module.exports = app;

@@ -2,6 +2,7 @@ require('dotenv').config()
 const { join } = require('path');
 const url = require('./urls')
 const ENV = process.env.ENV
+// const video = require('wdio-video-reporter');
 
 if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
     console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
@@ -77,18 +78,30 @@ exports.config = {
         applitools: ['./test-suites/applitools/*.js'],
         regression: ['./test-suites/regression/*.js'],
         sanity: ['./test-suites/sanity/*.js'],
-        smoke: ['./test-suites/smoke/*.js']
+        smoke: ['./test-suites/smoke/*.js'],
+        demo: ['./test-suites/demo/*.js'],
+        supertest: ['./test-suites/supertest/*.js']
     },
 
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
-
-        //API Test
-        './test/api-test.js', 
-
         //UI Test
-        // './test/hubspot-test.js',
+        './test/retail-logintest.js',
+        './test-suites/regression/visual.js',
+        './test-suites/regression/kohlstest.js',
+        './test-suites/supertest/api-test-filesystem.js',
+
+        './test-suites/demo/retail-visualcomaprisontest.js',
+        './test-suites/demo/retail-signuppagetest.js',
+        './test-suites/demo/retail-logintest.js',
+        './test-suites/demo/retail-addtocarttest.js',
+        './test-suites/demo/retail-checkoutpagetest.js',
+
+
+
+        // './test-suites/demo/EndtoEndTest.js'
+
     ],
     //
     // ============
@@ -118,7 +131,7 @@ exports.config = {
             // maxInstances can get overwritten per capability. So if you have an in-house Selenium
             // grid with only 5 firefox instances available you can make sure that not more than
             // 5 instances get started at a time.
-            maxInstances: 2,
+            maxInstances: 1,
             browserName: 'chrome',
             "goog:chromeOptions": {
                 // to run chrome headless the following flags are required
@@ -223,11 +236,19 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec', ['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: true,
-    }]],
+    reporters: ['spec',
+        // [video, {
+        //     outputDir: 'recordings',
+        //     saveAllVideos: true,       // If true, also saves videos for successful test cases
+        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        // }],
+        ['allure', {
+            outputDir: 'allure-results',
+            // disableWebdriverStepsReporting: false,
+            // disableWebdriverScreenshotsReporting: true,
+        }]],
+
+
 
     //
     // Options to be passed to Mocha.
@@ -235,7 +256,7 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         // timeout: 60000
-        timeout: process.env.DEBUG === 'true' ? 999999 : 60000
+        timeout: process.env.DEBUG === 'true' ? 999999 : 999999
     },
     //
     // =====
@@ -278,8 +299,11 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        browser.url('/');
+        browser.maximizeWindow();
+        browser.pause(5000);
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -287,6 +311,14 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
+
+    // beforeEach: function (browser, done) {
+    //     require('wdio-video-recorder').start(browser, done)
+    // },
+    // afterEach: function (browser, done) {
+    //     require('wdio-video-recorder').stop(browser, done)
+    // },
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -320,6 +352,7 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine).
      */
     afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        const { addFeature } = require('@wdio/allure-reporter').default
         if (!passed) {
             browser.takeScreenshot();
         }
@@ -348,7 +381,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    // after: function (result, capabilities, specs) {
+    // after: function (result, capabilities, specs) {  
     // },
     /**
      * Gets executed right after terminating the webdriver session.

@@ -1,7 +1,7 @@
 'use strict';
 
 var request = require('supertest');
-var app = require('../server');
+var app = require('../../server');
 
 before(() => {
   browser.closeWindow();
@@ -10,7 +10,7 @@ before(() => {
 describe('verify API Calls', () => {
 
   it('create a user', () => {
-    let requestPayload = { "id": "103", "name": "Kitty", "email": "kitty@gmail.com" };
+    let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com","pwd": "test1234"};
     // request(app)
     request('http://localhost:3000') // need to start the server 
       .post('/api/createuser')
@@ -21,7 +21,7 @@ describe('verify API Calls', () => {
 
         expect(res.body.status).equal(201);
         console.log('======== POST Call Reponse Details ======');
-        console.log(res.body.status, ","+res.body.usermsg);
+        console.log(res.body.status, "," + res.body.usermsg);
         let resource = res.body.responsePayload;
         console.log('Resource Details: ', resource);
       });
@@ -51,10 +51,11 @@ describe('verify API Calls', () => {
 
           let expectedUsers =
             [
-              { "id": "101", "name": "John", "email": "john@gmail.com" },
-              { "id": "102", "name": "Harry", "email": "harry@gmail.com" },
-              { "id": "103", "name": "Kitty", "email": "kitty@gmail.com" },
-              // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com" }
+              { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser" },
+              { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser" },
+              { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com","pwd": "test1234"}
+              // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com", "pwd": "testuser" }
+              
             ];
 
           let actdUsers = res.body.usersData;

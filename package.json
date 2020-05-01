@@ -9,7 +9,10 @@
     "applitools": "./node_modules/.bin/wdio wdio.conf.js --suite applitools",
     "regression": "./node_modules/.bin/wdio wdio.conf.js --suite regression",
     "sanity": "./node_modules/.bin/wdio wdio.conf.js --suite sanity",
-    "smoke": "./node_modules/.bin/wdio wdio.conf.js --suite smoke"
+    "smoke": "./node_modules/.bin/wdio wdio.conf.js --suite smoke",
+    "demo": "./node_modules/.bin/wdio wdio.conf.js --suite demo",
+    "supertest": "./node_modules/.bin/wdio wdio.conf.js --suite supertest",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,8 @@
     "dotnav",
     "wdio",
     "selenium-grid",
-    "visual-regression"
+    "visual-regression",
+    "Video recording"
   ],
   "author": "SumantaKumar",
   "license": "ISC",
@@ -62,6 +66,7 @@
     "mongodb": "^3.5.5",
     "mysql": "^2.18.1",
     "selenium-webdriver": "^4.0.0-alpha.7",
-    "wdio-geckodriver-service": "^1.0.3"
+    "wdio-geckodriver-service": "^1.0.3",
+    "wdio-video-reporter": "^2.0.0"
   }
 }

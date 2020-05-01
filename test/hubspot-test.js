@@ -32,12 +32,12 @@ describe('log into account : ', () => {
         expect(hubspotSignUpPage._getPasswordField.getValue()).equals(password);
     });
 
-    it('click on Log in button', () => {
+    it.skip('click on Log in button', () => {
         expect(hubspotSignUpPage._getLoginButton.isEnabled()).equals(true);
         hubspotSignUpPage._getLoginButton.click();
     });
 
-    it('verify error message', () => {
+    it.skip('verify error message', () => {
         browser.pause(2000);
 
         // verify login failed error message
