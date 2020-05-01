@@ -27,3 +27,6 @@ Supertest:
 2. ENV=sit npm run test - execute the test
 3. http://localhost:3000/api/users - to see the results
 
+Allure Report:
+1. npm run report
+
