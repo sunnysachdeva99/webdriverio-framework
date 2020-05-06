@@ -1,6 +1,0 @@
-{
-  "script": "return (function hideScrollBars(hide) {\n    try {\n        if (hide) {\n            document.body.style.overflow = 'hidden';\n        }\n        else {\n            document.body.style.overflow = '';\n        }\n    }\n    catch (e) {\n    }\n}).apply(null, arguments)",
-  "args": [
-    true
-  ]
-}

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//table/tbody/tr[2]/td[5]/input[2]"
-}

@@ -149,7 +149,7 @@ describe('Log into account', () => {
     // console.log('EmailAddressAPI: ' + apiEmailAddress);
     // console.log('PasswordAPI: ' + apiPassword);
     retainLoginPage._emailAddressField.setValue('autopracticeuser-1@gmail.com');
-    expect(retainLoginPage._emailAddressField.getValue()).equals('autopracticeuser-1@gmail.com');
+    expect(retainLoginPage._emailAddressField.getValue()).equals('autopracticeuser-1@gmail.comsss');
   });
 
   it('enter password', () => {
