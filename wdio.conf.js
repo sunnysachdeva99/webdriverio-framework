@@ -2,7 +2,7 @@ require('dotenv').config()
 const { join } = require('path');
 const url = require('./urls')
 const ENV = process.env.ENV
-// const video = require('wdio-video-reporter');
+const video = require('wdio-video-reporter');
 
 // if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
 //     console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
