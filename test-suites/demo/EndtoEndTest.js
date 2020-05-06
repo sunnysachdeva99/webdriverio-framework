@@ -336,55 +336,55 @@ describe("Checkout Process", function () {
 })
 
 // Visual Camprison
-// describe('Visual Validation', () => {
-//   it('Save Elements', () => {
+describe('Visual Validation', () => {
+  it('Save Elements', () => {
 
-//     homepage.moveToCategoryPage();
+    homepage.moveToCategoryPage();
 
-//     // scroll to bestseller
-//     homepage.getBestseller().scrollIntoView();
+    // scroll to bestseller
+    homepage.getBestseller().scrollIntoView();
 
-//     // Save bestseller
-//     browser.saveElement(homepage.getBestseller(), 'getBestseller');
+    // Save bestseller
+    browser.saveElement(homepage.getBestseller(), 'getBestseller');
 
-//     // scroll to menscoat
-//     homepage.getMensCoats().scrollIntoView();
+    // scroll to menscoat
+    homepage.getMensCoats().scrollIntoView();
 
-//     // Save menscoat
-//     browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
+    // Save menscoat
+    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
 
-//     // scroll to socialblock
-//     homepage.getSocialBlock().scrollIntoView();
+    // scroll to socialblock
+    homepage.getSocialBlock().scrollIntoView();
 
-//     // Save socialblock
-//     browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
-//   });
+    // Save socialblock
+    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
+  });
 
-//   it('Compare Elements', () => {
+  it('Compare Elements', () => {
 
-//     // scroll to bestseller
-//     homepage.getBestseller().scrollIntoView();
+    // scroll to bestseller
+    homepage.getBestseller().scrollIntoView();
 
-//     // Check bestseller
-//     expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
+    // Check bestseller
+    expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
 
-//     // scroll to menscoat
-//     homepage.getMensCoats().scrollIntoView();
+    // scroll to menscoat
+    homepage.getMensCoats().scrollIntoView();
 
-//     // Check menscoat
-//     expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
+    // Check menscoat
+    expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
 
-//     // scroll to socialblock
-//     homepage.getSocialBlock().scrollIntoView();
+    // scroll to socialblock
+    homepage.getSocialBlock().scrollIntoView();
 
-//     // Check socialblock
-//     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
-//   });
+    // Check socialblock
+    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
+  });
  
-// });
+});
 
 
-describe('Visual Comaprison For Different Elements', () => {
+describe('Visual Validation For Different Elements', () => {
   it('Save Elements', () => {
 
     homepage.moveToCategoryPage();
