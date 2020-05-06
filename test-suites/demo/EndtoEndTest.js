@@ -77,6 +77,8 @@ describe("Sign up details", function () {
       return signupPage._sigininlink.isDisplayed() == true
     }, 2000, 'Sign in link not displayed.');
   });
+
+  console.log('Signup completed...');
 });
 
 
@@ -172,7 +174,7 @@ describe('Log into account', () => {
     expect(retainLoginPage._myAccount.isDisplayed()).equals(true);
     browser.pause(5000);
   });
-
+  console.log('Signin completed...');
 });
 
 
@@ -264,6 +266,7 @@ describe('Add Products to cart', function () {
     homepage.cont_shop();
     browser.pause(5000);
   })
+  console.log('Add to cart completed...');
 })
 
 
@@ -328,13 +331,13 @@ describe("Checkout Process", function () {
     // expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
 
 
-    
+    console.log('Checkout process completed...');
   })
 
 })
 
 // Visual Camprison
-describe.skip('Visual Comaprison', () => {
+describe.skip('Visual Validation', () => {
   it('Save Elements', () => {
 
     homepage.moveToCategoryPage();
@@ -378,6 +381,7 @@ describe.skip('Visual Comaprison', () => {
     // Check socialblock
     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
   });
+  console.log('Visual Validation completed...');
 });
 
 
@@ -426,4 +430,5 @@ describe.skip('Visual Comaprison For Different Elements', () => {
       resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
       })).equal(0);
   });
+  console.log('Visual Validation completed...');
 });
