@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//table[@id='cart_summary']/tbody[1]/tr"
+}

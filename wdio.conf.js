@@ -2,12 +2,12 @@ require('dotenv').config()
 const { join } = require('path');
 const url = require('./urls')
 const ENV = process.env.ENV
-// const video = require('wdio-video-reporter');
+const video = require('wdio-video-reporter');
 
-if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
-    console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
-    process.exit();
-}
+// if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
+//     console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
+//     process.exit();
+// }
 
 exports.config = {
     //
@@ -185,8 +185,8 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    // baseUrl: 'https://app.hubspot.com',
-    baseUrl: url[process.env.ENV],
+    baseUrl: 'http://automationpractice.com/index.php',
+    // baseUrl: url[process.env.ENV],
 
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -237,20 +237,17 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec',
-        // [video, {
-        //     outputDir: 'recordings',
-        //     saveAllVideos: true,       // If true, also saves videos for successful test cases
-        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        // }],
+        [video, {
+            outputDir: 'recordings',
+            saveAllVideos: true,       // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
         ['allure', {
             outputDir: 'allure-results',
             // disableWebdriverStepsReporting: false,
-            // disableWebdriverScreenshotsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
         }]],
-
-
-
-    //
+    
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {

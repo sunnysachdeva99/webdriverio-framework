@@ -118,19 +118,28 @@ class RetailHomePage {
 
     add_item_by_search() {
 
-        let more = $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span')
-        more.scrollIntoView();
+        // $('//img[@src="http://automationpractice.com/img/p/1/1-home_default.jpg"]').scrollIntoView();
+        
+        // let more = $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span')
+        // more.scrollIntoView();
+        
+        // this.stock.scrollIntoView();
+        $('ul.product_list').scrollIntoView();
+        browser.pause(1000);
+        
         browser.execute(() => { $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span').mouseover(); });
-        more.click()
+       
+        let more = $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span');
+        more.click();;
 
         // this.item2.click()
     }
 
     add_item_by_feature() {
 
-        let more = $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span')
+        let more = $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span');
         browser.execute(() => { $('#center_column > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2) > span').mouseover(); });
-        more.click()
+        more.click();
 
         // this.item3.click()
     }

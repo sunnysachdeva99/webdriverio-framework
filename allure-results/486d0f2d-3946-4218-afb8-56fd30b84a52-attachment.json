@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#cart_summary>tbody>tr"
+}

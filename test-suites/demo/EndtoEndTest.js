@@ -12,6 +12,7 @@
 
 var request = require('supertest');
 var app = require('../../server');
+const allureReporter = require('@wdio/allure-reporter').default
 
 const homepage = require('../../pages/retail-homepage')
 const signupPage = require('../../pages/retail-signuppage')
@@ -23,6 +24,7 @@ const addressPage = require("../../pages/retail-addresspage");
 const shippingPage = require("../../pages/retail-shippingpage");
 const paymentPage = require("../../pages/retail-paymentpage");
 
+
 var apiEmailAddress;
 var apiPassword;
 
@@ -31,9 +33,12 @@ var apiPassword;
 describe("Sign up details", function () {
 
   it("Account creation", function () {
+    browser.takeScreenshot();
     signupPage.clickOnSignin();
+    // allureReporter.addAttachment('SignUpLink', signupPage._sigininlink.toString());
+    // allureReporter.addAttachment({ name: 'SignUpLink', content: signupPage._sigininlink.toString(), type: 'screenshot' })
     signupPage.enterEmail(signupData.email);
-    console.log(signupData.email);
+    // console.log(signupData.email);
     assert.equal(signupData.email, signupPage.emailaddress.getValue());
     signupPage.clickOnCreateAccount();
     browser.waitUntil(function () {
@@ -42,6 +47,7 @@ describe("Sign up details", function () {
   });
 
   it("User Personal Information", function () {
+    browser.takeScreenshot();
     // signupPage.clickOnGender();
     signupPage.enterCustFirstName(signupData.custfirstname);
     signupPage.enterCustLastName(signupData.custlastname);
@@ -50,6 +56,7 @@ describe("Sign up details", function () {
   });
 
   it("User Address Details", function () {
+    browser.takeScreenshot();
     signupPage.enterAddFirstName(signupData.addfirstname);
     signupPage.enterAddLastName(signupData.addlastname);
     signupPage.enterCompany(signupData.company);
@@ -75,7 +82,7 @@ describe("Sign up details", function () {
 
 
 // Sign in Flow
-describe('verify API Calls', () => {
+describe.skip('verify API Calls', () => {
 
   it('create a user', () => {
     let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" }
@@ -140,12 +147,12 @@ describe('Log into account', () => {
   it('enter email address', () => {
     // console.log('EmailAddressAPI: ' + apiEmailAddress);
     // console.log('PasswordAPI: ' + apiPassword);
-    retainLoginPage._emailAddressField.setValue(apiEmailAddress);
+    retainLoginPage._emailAddressField.setValue('autopracticeuser-1@gmail.com');
     expect(retainLoginPage._emailAddressField.getValue()).equals('autopracticeuser-1@gmail.com');
   });
 
   it('enter password', () => {
-    retainLoginPage._passwordField.setValue(apiPassword);
+    retainLoginPage._passwordField.setValue('test1234');
     expect(retainLoginPage._passwordField.getValue()).equals('test1234');
   });
 
@@ -185,43 +192,44 @@ describe('Add Products to cart', function () {
     homepage.wait_for_elem(homepage.cont_shop_link, 'Continue shopping');
     homepage.cont_shop();
     homepage.wait_for_elem(homepage.footer_news_letter, 'Newsletter');
-  })
-
-  it('Search - add prodcut to cart', function () {
-
-    homepage.search_with('summer dresses')
-    stock = homepage.check_stock();
-    expect(stock).to.equal('In stock');
-    browser.pause(1000);
-
-    homepage.add_item_by_search();
-    homepage.wait_for_elem(homepage.footer_news_letter, 'Newsletter');
-    price = pdppage.get_price_pdp();
-    pdppage.inc_quantity();
-    pdppage.inc_quantity();
-    pdppage.inc_quantity();
-    quantity = pdppage.get_quantity_pdp();
-    size = 'M';
-    pdppage.get_size_pdp(size);
-    color = pdppage.add_color();
-    name = pdppage.get_dress_name_pdp();
-    pdppage.add_to_cart();
-    homepage.wait_for_elem(homepage.cont_shop_link, 'Continue shopping');
-    success = pdppage.get_success();
-    dress = pdppage.get_dress_name_cart();
-    color_size = pdppage.get_color_size_cart();
-    qnt = pdppage.get_quantity_cart();
-    expect(qnt).to.equal(quantity);
-    cart_price = pdppage.get_price_cart();
-    price = parseFloat(price.match(/\d+/g).map(Number).join('.')) * parseInt(quantity);
-    expect(success).to.equal('Product successfully added to your shopping cart');
-    expect(cart_price).to.equal('$' + price.toString());
-    expect(dress).to.equal(name);
-    expect(color_size).to.include(color);
-    expect(color_size).to.include(size);
-    homepage.cont_shop();
     browser.pause(2000);
   })
+
+  // it('Search - add prodcut to cart', function () {
+
+  //   homepage.search_with('summer dresses')
+  //   stock = homepage.check_stock();
+  //   expect(stock).to.equal('In stock');
+  //   browser.pause(1000);
+
+  //   homepage.add_item_by_search();
+  //   homepage.wait_for_elem(homepage.footer_news_letter, 'Newsletter');
+  //   price = pdppage.get_price_pdp();
+  //   pdppage.inc_quantity();
+  //   pdppage.inc_quantity();
+  //   pdppage.inc_quantity();
+  //   quantity = pdppage.get_quantity_pdp();
+  //   size = 'M';
+  //   pdppage.get_size_pdp(size);
+  //   color = pdppage.add_color();
+  //   name = pdppage.get_dress_name_pdp();
+  //   pdppage.add_to_cart();
+  //   homepage.wait_for_elem(homepage.cont_shop_link, 'Continue shopping');
+  //   success = pdppage.get_success();
+  //   dress = pdppage.get_dress_name_cart();
+  //   color_size = pdppage.get_color_size_cart();
+  //   qnt = pdppage.get_quantity_cart();
+  //   expect(qnt).to.equal(quantity);
+  //   cart_price = pdppage.get_price_cart();
+  //   price = parseFloat(price.match(/\d+/g).map(Number).join('.')) * parseInt(quantity);
+  //   expect(success).to.equal('Product successfully added to your shopping cart');
+  //   expect(cart_price).to.equal('$' + price.toString());
+  //   expect(dress).to.equal(name);
+  //   expect(color_size).to.include(color);
+  //   expect(color_size).to.include(size);
+  //   homepage.cont_shop();
+  //   browser.pause(2000);
+  // })
 
   it('Browse From Left Nav - add prodcut to cart ', function () {
     homepage.get_dresses();
@@ -317,13 +325,16 @@ describe("Checkout Process", function () {
     paymentPage.clickConfirmMyOrder();
     // assert.equal('Your order on My Store is complete.', paymentPage.getConfirmationMessage(), 'Confrimation message is not present')
     expect('Your order on My Store is complete.').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
+    // expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
 
+
+    
   })
 
 })
 
 // Visual Camprison
-describe('Visual Comaprison', () => {
+describe.skip('Visual Comaprison', () => {
   it('Save Elements', () => {
 
     homepage.moveToCategoryPage();
@@ -412,7 +423,7 @@ describe.skip('Visual Comaprison For Different Elements', () => {
 
     // Check socialblock
     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
-      resizeDimensions : { top: 50, right: 70, bottom: 40, left: 0}
+      resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
       })).equal(0);
   });
 });

@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "div[id=\"newsletter_block_left\"] h4"
+}
