@@ -35,10 +35,7 @@ describe("Sign up details", function () {
   it("Account creation", function () {
     browser.takeScreenshot();
     signupPage.clickOnSignin();
-    // allureReporter.addAttachment('SignUpLink', signupPage._sigininlink.toString());
-    // allureReporter.addAttachment({ name: 'SignUpLink', content: signupPage._sigininlink.toString(), type: 'screenshot' })
     signupPage.enterEmail(signupData.email);
-    // console.log(signupData.email);
     assert.equal(signupData.email, signupPage.emailaddress.getValue());
     signupPage.clickOnCreateAccount();
     browser.waitUntil(function () {
@@ -148,13 +145,13 @@ describe('Log into account', () => {
   it('enter email address', () => {
     // console.log('EmailAddressAPI: ' + apiEmailAddress);
     // console.log('PasswordAPI: ' + apiPassword);
-    retainLoginPage._emailAddressField.setValue('autopracticeuser-1@gmail.com');
-    expect(retainLoginPage._emailAddressField.getValue()).equals('autopracticeuser-1@gmail.comsss');
+    retainLoginPage._emailAddressField.setValue(signupData.email);
+    expect(retainLoginPage._emailAddressField.getValue()).equals(signupData.email);
   });
 
   it('enter password', () => {
-    retainLoginPage._passwordField.setValue('test1234');
-    expect(retainLoginPage._passwordField.getValue()).equals('test1234');
+    retainLoginPage._passwordField.setValue(signupData.password);
+    expect(retainLoginPage._passwordField.getValue()).equals(signupData.password);
   });
 
   it('click on Sign in button', () => {
@@ -167,7 +164,7 @@ describe('Log into account', () => {
     retainLoginPage._authUserName.waitForDisplayed({ timeout: 3000 });
 
     console.log('UserName: ', retainLoginPage._authUserName.getText());
-    expect(retainLoginPage._authUserName.getText()).equals('test demo');
+    expect(retainLoginPage._authUserName.getText()).equals('testuser demo');
 
     console.log('Dispalyed: ', retainLoginPage._myAccount.isDisplayed());
     expect(retainLoginPage._myAccount.isDisplayed()).equals(true);
