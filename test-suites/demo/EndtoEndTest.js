@@ -336,58 +336,11 @@ describe("Checkout Process", function () {
 })
 
 // Visual Camprison
-describe('Visual Validation', () => {
-  it('Save Elements', () => {
-
-    homepage.moveToCategoryPage();
-
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
-
-    // Save bestseller
-    browser.saveElement(homepage.getBestseller(), 'getBestseller');
-
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
-
-    // Save menscoat
-    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
-
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
-
-    // Save socialblock
-    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
-  });
-
-  it('Compare Elements', () => {
-
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
-
-    // Check bestseller
-    expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
-
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
-
-    // Check menscoat
-    expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
-
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
-
-    // Check socialblock
-    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
-  });
- 
-});
-
-
-// describe.skip('Visual Comaprison For Different Elements', () => {
+// describe('Visual Validation', () => {
 //   it('Save Elements', () => {
 
 //     homepage.moveToCategoryPage();
+
 //     // scroll to bestseller
 //     homepage.getBestseller().scrollIntoView();
 
@@ -425,9 +378,56 @@ describe('Visual Validation', () => {
 //     homepage.getSocialBlock().scrollIntoView();
 
 //     // Check socialblock
-//     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
-//       resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
-//       })).equal(0);
+//     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
 //   });
  
 // });
+
+
+describe('Visual Comaprison For Different Elements', () => {
+  it('Save Elements', () => {
+
+    homepage.moveToCategoryPage();
+    // scroll to bestseller
+    homepage.getBestseller().scrollIntoView();
+
+    // Save bestseller
+    browser.saveElement(homepage.getBestseller(), 'getBestseller');
+
+    // scroll to menscoat
+    homepage.getMensCoats().scrollIntoView();
+
+    // Save menscoat
+    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
+
+    // scroll to socialblock
+    homepage.getSocialBlock().scrollIntoView();
+
+    // Save socialblock
+    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
+  });
+
+  it('Compare Elements', () => {
+
+    // scroll to bestseller
+    homepage.getBestseller().scrollIntoView();
+
+    // Check bestseller
+    expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
+
+    // scroll to menscoat
+    homepage.getMensCoats().scrollIntoView();
+
+    // Check menscoat
+    expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
+
+    // scroll to socialblock
+    homepage.getSocialBlock().scrollIntoView();
+
+    // Check socialblock
+    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
+      resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
+      })).equal(0);
+  });
+ 
+});

@@ -237,11 +237,11 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec',
-        // [video, {
-        //     outputDir: 'recordings',
-        //     saveAllVideos: true,       // If true, also saves videos for successful test cases
-        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        // }],
+        [video, {
+            outputDir: 'recordings',
+            saveAllVideos: true,       // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
         ['allure', {
             outputDir: 'allure-results',
             // disableWebdriverStepsReporting: false,
