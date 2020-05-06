@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//*[@id=\"block_top_menu\"]/ul/li[2]/a"
-}

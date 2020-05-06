@@ -83,61 +83,61 @@ describe("Sign up details", function () {
 
 
 // Sign in Flow
-describe.skip('verify API Calls', () => {
+// describe.skip('verify API Calls', () => {
 
-  it('create a user', () => {
-    let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" }
-    // request(app)
-    request('http://localhost:3000') // need to start the server 
-      .post('/api/createuser')
-      .send(requestPayload)
-      .set('Content-Type', 'application/json')
-      .expect(200)
-      .end(function (err, res) {
+//   it('create a user', () => {
+//     let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" }
+//     // request(app)
+//     request('http://localhost:3000') // need to start the server 
+//       .post('/api/createuser')
+//       .send(requestPayload)
+//       .set('Content-Type', 'application/json')
+//       .expect(200)
+//       .end(function (err, res) {
 
-        expect(res.body.status).equal(201);
-        console.log('======== POST Call Reponse Details ======');
-        console.log(res.body.status, "," + res.body.usermsg);
-        let resource = res.body.responsePayload;
-        console.log('Resource Details: ', resource);
-      });
-  });
+//         expect(res.body.status).equal(201);
+//         console.log('======== POST Call Reponse Details ======');
+//         console.log(res.body.status, "," + res.body.usermsg);
+//         let resource = res.body.responsePayload;
+//         console.log('Resource Details: ', resource);
+//       });
+//   });
 
 
-  it('get user data ', () => {
-    // request(app)
-    request('http://localhost:3000') // need to start the server 
-      .get('/api/users')
-      .expect('Content-Type', /json/)
-      // .expect(200)
-      .end(function (err, res) {
-        if (err) {
-          console.log('Check the URL');
-        } else {
-          console.log('======== GET Call Reponse Details ======');
-          console.log("Status Code: ", res.status);
-          console.log("Messae: ", res.body.message);
-          expect(res.status).equal(200);
-          expect(res.body.message).equal('Success');
-          let expectedUsers =
-            [
-              { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser" },
-              { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser" },
-              { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" },
-              // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com","pwd": "testuser"}
-            ];
-          let actdUsers = res.body.usersData;
-          // console.log('Data Valildation: ', expectedUsers, "  ==  ", actdUsers);
-          // expect(expectedUsers).to.eql(actdUsers);
+//   it('get user data ', () => {
+//     // request(app)
+//     request('http://localhost:3000') // need to start the server 
+//       .get('/api/users')
+//       .expect('Content-Type', /json/)
+//       // .expect(200)
+//       .end(function (err, res) {
+//         if (err) {
+//           console.log('Check the URL');
+//         } else {
+//           console.log('======== GET Call Reponse Details ======');
+//           console.log("Status Code: ", res.status);
+//           console.log("Messae: ", res.body.message);
+//           expect(res.status).equal(200);
+//           expect(res.body.message).equal('Success');
+//           let expectedUsers =
+//             [
+//               { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser" },
+//               { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser" },
+//               { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" },
+//               // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com","pwd": "testuser"}
+//             ];
+//           let actdUsers = res.body.usersData;
+//           // console.log('Data Valildation: ', expectedUsers, "  ==  ", actdUsers);
+//           // expect(expectedUsers).to.eql(actdUsers);
 
-          // Send the following credentials for login the UI application
-          var userDetails = actdUsers[actdUsers.length - 1];
-          apiEmailAddress = userDetails.email;
-          apiPassword = userDetails.pwd;
-        }
-      });
-  });
-});
+//           // Send the following credentials for login the UI application
+//           var userDetails = actdUsers[actdUsers.length - 1];
+//           apiEmailAddress = userDetails.email;
+//           apiPassword = userDetails.pwd;
+//         }
+//       });
+//   });
+// });
 
 describe('Log into account', () => {
 
@@ -336,7 +336,7 @@ describe("Checkout Process", function () {
 })
 
 // Visual Camprison
-describe.skip('Visual Validation', () => {
+describe('Visual Validation', () => {
   it('Save Elements', () => {
 
     homepage.moveToCategoryPage();
@@ -384,50 +384,50 @@ describe.skip('Visual Validation', () => {
 });
 
 
-describe.skip('Visual Comaprison For Different Elements', () => {
-  it('Save Elements', () => {
+// describe.skip('Visual Comaprison For Different Elements', () => {
+//   it('Save Elements', () => {
 
-    homepage.moveToCategoryPage();
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
+//     homepage.moveToCategoryPage();
+//     // scroll to bestseller
+//     homepage.getBestseller().scrollIntoView();
 
-    // Save bestseller
-    browser.saveElement(homepage.getBestseller(), 'getBestseller');
+//     // Save bestseller
+//     browser.saveElement(homepage.getBestseller(), 'getBestseller');
 
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
+//     // scroll to menscoat
+//     homepage.getMensCoats().scrollIntoView();
 
-    // Save menscoat
-    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
+//     // Save menscoat
+//     browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
 
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
+//     // scroll to socialblock
+//     homepage.getSocialBlock().scrollIntoView();
 
-    // Save socialblock
-    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
-  });
+//     // Save socialblock
+//     browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
+//   });
 
-  it('Compare Elements', () => {
+//   it('Compare Elements', () => {
 
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
+//     // scroll to bestseller
+//     homepage.getBestseller().scrollIntoView();
 
-    // Check bestseller
-    expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
+//     // Check bestseller
+//     expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
 
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
+//     // scroll to menscoat
+//     homepage.getMensCoats().scrollIntoView();
 
-    // Check menscoat
-    expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
+//     // Check menscoat
+//     expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
 
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
+//     // scroll to socialblock
+//     homepage.getSocialBlock().scrollIntoView();
 
-    // Check socialblock
-    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
-      resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
-      })).equal(0);
-  });
+//     // Check socialblock
+//     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
+//       resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
+//       })).equal(0);
+//   });
  
-});
+// });
