@@ -1,0 +1,59 @@
+{
+  "total" : 5,
+  "items" : [ {
+    "uid" : "a1de53afe70454b4c696af63874df3da",
+    "name" : "Log into account",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "55773165c792da566c2e86bff182cbec",
+    "name" : "Sign up details",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "f6c725af7e492b20deae2c22cd33daf4",
+    "name" : "Add Products to cart",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "b4d54c770d721a65587b6c138d8054b4",
+    "name" : "Visual Validation",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "a2b01c8e558165ea5dfd3166c8dd7d1f",
+    "name" : "Checkout Process",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

@@ -1,0 +1,131 @@
+[ {
+  "uid" : "24cfb32c72366816",
+  "name" : "User Address Details",
+  "time" : {
+    "start" : 1588766101938,
+    "stop" : 1588766117360,
+    "duration" : 15422
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "86438156c1267896",
+  "name" : "Compare Elements",
+  "time" : {
+    "start" : 1588766210210,
+    "stop" : 1588766212553,
+    "duration" : 2343
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbc8e5abe69bbe79",
+  "name" : "Browse From Left Nav - add prodcut to cart ",
+  "time" : {
+    "start" : 1588766160823,
+    "stop" : 1588766184887,
+    "duration" : 24064
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29696a957ead8254",
+  "name" : "click on Sign in button",
+  "time" : {
+    "start" : 1588766123411,
+    "stop" : 1588766129994,
+    "duration" : 6583
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "598c0a06eeacd7bd",
+  "name" : "User Personal Information",
+  "time" : {
+    "start" : 1588766098601,
+    "stop" : 1588766101929,
+    "duration" : 3328
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f62f10e75ee2afdc",
+  "name" : "Save Elements",
+  "time" : {
+    "start" : 1588766202205,
+    "stop" : 1588766210202,
+    "duration" : 7997
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8b37a706195435e",
+  "name" : "Browse - add prodcut to cart",
+  "time" : {
+    "start" : 1588766135460,
+    "stop" : 1588766160814,
+    "duration" : 25354
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b3d6a2b48abd451d",
+  "name" : "click on Sign in Link",
+  "time" : {
+    "start" : 1588766117409,
+    "stop" : 1588766120307,
+    "duration" : 2898
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "42f65a6c99117d57",
+  "name" : "enter email address",
+  "time" : {
+    "start" : 1588766120321,
+    "stop" : 1588766121899,
+    "duration" : 1578
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "318474e8f746c5b8",
+  "name" : "Summary - Address - Shipping - Payment Checkout Process.",
+  "time" : {
+    "start" : 1588766184925,
+    "stop" : 1588766202175,
+    "duration" : 17250
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a53f218505b0581",
+  "name" : "user should sign in successfully",
+  "time" : {
+    "start" : 1588766130005,
+    "stop" : 1588766135437,
+    "duration" : 5432
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c368d235b4eb2fa",
+  "name" : "Account creation",
+  "time" : {
+    "start" : 1588766091725,
+    "stop" : 1588766098591,
+    "duration" : 6866
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8af6743b7afae95",
+  "name" : "enter password",
+  "time" : {
+    "start" : 1588766121906,
+    "stop" : 1588766123402,
+    "duration" : 1496
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

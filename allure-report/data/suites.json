@@ -1,0 +1,194 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Sign up details",
+    "children" : [ {
+      "name" : "Account creation",
+      "uid" : "2c368d235b4eb2fa",
+      "parentUid" : "55773165c792da566c2e86bff182cbec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766091725,
+        "stop" : 1588766098591,
+        "duration" : 6866
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "User Personal Information",
+      "uid" : "598c0a06eeacd7bd",
+      "parentUid" : "55773165c792da566c2e86bff182cbec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766098601,
+        "stop" : 1588766101929,
+        "duration" : 3328
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "User Address Details",
+      "uid" : "24cfb32c72366816",
+      "parentUid" : "55773165c792da566c2e86bff182cbec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766101938,
+        "stop" : 1588766117360,
+        "duration" : 15422
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    } ],
+    "uid" : "55773165c792da566c2e86bff182cbec"
+  }, {
+    "name" : "Log into account",
+    "children" : [ {
+      "name" : "click on Sign in Link",
+      "uid" : "b3d6a2b48abd451d",
+      "parentUid" : "a1de53afe70454b4c696af63874df3da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766117409,
+        "stop" : 1588766120307,
+        "duration" : 2898
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "enter email address",
+      "uid" : "42f65a6c99117d57",
+      "parentUid" : "a1de53afe70454b4c696af63874df3da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766120321,
+        "stop" : 1588766121899,
+        "duration" : 1578
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "enter password",
+      "uid" : "e8af6743b7afae95",
+      "parentUid" : "a1de53afe70454b4c696af63874df3da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766121906,
+        "stop" : 1588766123402,
+        "duration" : 1496
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "click on Sign in button",
+      "uid" : "29696a957ead8254",
+      "parentUid" : "a1de53afe70454b4c696af63874df3da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766123411,
+        "stop" : 1588766129994,
+        "duration" : 6583
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "user should sign in successfully",
+      "uid" : "3a53f218505b0581",
+      "parentUid" : "a1de53afe70454b4c696af63874df3da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766130005,
+        "stop" : 1588766135437,
+        "duration" : 5432
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    } ],
+    "uid" : "a1de53afe70454b4c696af63874df3da"
+  }, {
+    "name" : "Add Products to cart",
+    "children" : [ {
+      "name" : "Browse - add prodcut to cart",
+      "uid" : "d8b37a706195435e",
+      "parentUid" : "f6c725af7e492b20deae2c22cd33daf4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766135460,
+        "stop" : 1588766160814,
+        "duration" : 25354
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "Browse From Left Nav - add prodcut to cart ",
+      "uid" : "cbc8e5abe69bbe79",
+      "parentUid" : "f6c725af7e492b20deae2c22cd33daf4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766160823,
+        "stop" : 1588766184887,
+        "duration" : 24064
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    } ],
+    "uid" : "f6c725af7e492b20deae2c22cd33daf4"
+  }, {
+    "name" : "Checkout Process",
+    "children" : [ {
+      "name" : "Summary - Address - Shipping - Payment Checkout Process.",
+      "uid" : "318474e8f746c5b8",
+      "parentUid" : "a2b01c8e558165ea5dfd3166c8dd7d1f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766184925,
+        "stop" : 1588766202175,
+        "duration" : 17250
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    } ],
+    "uid" : "a2b01c8e558165ea5dfd3166c8dd7d1f"
+  }, {
+    "name" : "Visual Validation",
+    "children" : [ {
+      "name" : "Save Elements",
+      "uid" : "f62f10e75ee2afdc",
+      "parentUid" : "b4d54c770d721a65587b6c138d8054b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766202205,
+        "stop" : 1588766210202,
+        "duration" : 7997
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    }, {
+      "name" : "Compare Elements",
+      "uid" : "86438156c1267896",
+      "parentUid" : "b4d54c770d721a65587b6c138d8054b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588766210210,
+        "stop" : 1588766212553,
+        "duration" : 2343
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome", "81.0.4044.138" ]
+    } ],
+    "uid" : "b4d54c770d721a65587b6c138d8054b4"
+  } ]
+}
