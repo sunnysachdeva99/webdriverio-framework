@@ -2,7 +2,7 @@ require('dotenv').config()
 const { join } = require('path');
 const url = require('./urls')
 const ENV = process.env.ENV
-// const video = require('wdio-video-reporter');
+const video = require('wdio-video-reporter');
 
 // if (!ENV || !['dev', 'qa', 'stage', 'sit', 'prod'].includes(ENV)) {
 //     console.log('Please pass the correct ENV value: ENV=dev | qa | stage | sit | prod');
@@ -136,23 +136,22 @@ exports.config = {
             "goog:chromeOptions": {
                 // to run chrome headless the following flags are required
                 // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-                args: ['--headless', '--disable-gpu'],       
+                // args: ['--headless', '--disable-gpu'],
             }
             // If outputDir is provided WebdriverIO can capture driver session logs
             // it is possible to configure which logTypes to include/exclude.
             // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
             // excludeDriverLogs: ['bugreport', 'server'],
-
         }
-        // ,
-        // {
-        //     maxInstances: 1,
-        //     browserName: 'firefox',
-        //     "moz:firefoxOptions": {
-        //         // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
-        //         // args: ['-headless', '-private']
-        //     }
-        // }
+        ,
+        {
+            maxInstances: 1,
+            browserName: 'firefox',
+            "moz:firefoxOptions": {
+                // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+                // args: ['-headless', '-private']
+            }
+        }
     ],
     //
     // ===================
@@ -209,10 +208,10 @@ exports.config = {
             {
                 // Some options, see the docs for more
                 baselineFolder: join(process.cwd(), './images/baseline/'),
-                formatImageName: '{tag}-{logName}-{width}x{height}',
+                formatImageName: '{tag}',
                 screenshotPath: join(process.cwd(), '.tmp/'),
                 savePerInstance: true,
-                autoSaveBaseline: true,
+                // autoSaveBaseline: true,
                 blockOutStatusBar: true,
                 blockOutToolBar: true,
                 // ... more options
@@ -237,17 +236,17 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec',
-        // [video, {
-        //     outputDir: 'recordings',
-        //     saveAllVideos: true,       // If true, also saves videos for successful test cases
-        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        // }],
+        [video, {
+            outputDir: 'recordings',
+            saveAllVideos: true,       // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 10, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
         ['allure', {
             outputDir: 'allure-results',
             // disableWebdriverStepsReporting: false,
             disableWebdriverScreenshotsReporting: false,
         }]],
-    
+
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {

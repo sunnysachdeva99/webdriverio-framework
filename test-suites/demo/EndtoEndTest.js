@@ -5,7 +5,7 @@
  * Login in account
  * Add to Cart
  * Checkout process
- * Visual Comparison
+ * Visual Validation
  */
 
 'use strict';
@@ -80,61 +80,61 @@ describe("Sign up details", function () {
 
 
 // Sign in Flow
-// describe.skip('verify API Calls', () => {
+describe('verify API Calls', () => {
 
-//   it('create a user', () => {
-//     let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" }
-//     // request(app)
-//     request('http://localhost:3000') // need to start the server 
-//       .post('/api/createuser')
-//       .send(requestPayload)
-//       .set('Content-Type', 'application/json')
-//       .expect(200)
-//       .end(function (err, res) {
+  it('create a user', () => {
+    let requestPayload = { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" }
+    // request(app)
+    request('http://localhost:3000') // need to start the server 
+      .post('/api/createuser')
+      .send(requestPayload)
+      .set('Content-Type', 'application/json')
+      .expect(200)
+      .end(function (err, res) {
 
-//         expect(res.body.status).equal(201);
-//         console.log('======== POST Call Reponse Details ======');
-//         console.log(res.body.status, "," + res.body.usermsg);
-//         let resource = res.body.responsePayload;
-//         console.log('Resource Details: ', resource);
-//       });
-//   });
+        expect(res.body.status).equal(201);
+        console.log('======== POST Call Reponse Details ======');
+        console.log(res.body.status, "," + res.body.usermsg);
+        let resource = res.body.responsePayload;
+        console.log('Resource Details: ', resource);
+      });
+  });
 
 
-//   it('get user data ', () => {
-//     // request(app)
-//     request('http://localhost:3000') // need to start the server 
-//       .get('/api/users')
-//       .expect('Content-Type', /json/)
-//       // .expect(200)
-//       .end(function (err, res) {
-//         if (err) {
-//           console.log('Check the URL');
-//         } else {
-//           console.log('======== GET Call Reponse Details ======');
-//           console.log("Status Code: ", res.status);
-//           console.log("Messae: ", res.body.message);
-//           expect(res.status).equal(200);
-//           expect(res.body.message).equal('Success');
-//           let expectedUsers =
-//             [
-//               { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser" },
-//               { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser" },
-//               { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" },
-//               // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com","pwd": "testuser"}
-//             ];
-//           let actdUsers = res.body.usersData;
-//           // console.log('Data Valildation: ', expectedUsers, "  ==  ", actdUsers);
-//           // expect(expectedUsers).to.eql(actdUsers);
+  it('get user data ', () => {
+    // request(app)
+    request('http://localhost:3000') // need to start the server 
+      .get('/api/users')
+      .expect('Content-Type', /json/)
+      // .expect(200)
+      .end(function (err, res) {
+        if (err) {
+          console.log('Check the URL');
+        } else {
+          console.log('======== GET Call Reponse Details ======');
+          console.log("Status Code: ", res.status);
+          console.log("Messae: ", res.body.message);
+          expect(res.status).equal(200);
+          expect(res.body.message).equal('Success');
+          let expectedUsers =
+            [
+              { "id": "101", "name": "John", "email": "john@gmail.com", "pwd": "testuser" },
+              { "id": "102", "name": "Harry", "email": "harry@gmail.com", "pwd": "testuser" },
+              { "id": "103", "name": "test demo", "email": "autopracticeuser-1@gmail.com", "pwd": "test1234" },
+              // { "id": "104", "name": "Mitty", "email": "mitty@gmail.com","pwd": "testuser"}
+            ];
+          let actdUsers = res.body.usersData;
+          // console.log('Data Valildation: ', expectedUsers, "  ==  ", actdUsers);
+          // expect(expectedUsers).to.eql(actdUsers);
 
-//           // Send the following credentials for login the UI application
-//           var userDetails = actdUsers[actdUsers.length - 1];
-//           apiEmailAddress = userDetails.email;
-//           apiPassword = userDetails.pwd;
-//         }
-//       });
-//   });
-// });
+          // Send the following credentials for login the UI application
+          var userDetails = actdUsers[actdUsers.length - 1];
+          apiEmailAddress = userDetails.email;
+          apiPassword = userDetails.pwd;
+        }
+      });
+  });
+});
 
 describe('Log into account', () => {
 
@@ -145,13 +145,13 @@ describe('Log into account', () => {
   it('enter email address', () => {
     // console.log('EmailAddressAPI: ' + apiEmailAddress);
     // console.log('PasswordAPI: ' + apiPassword);
-    retainLoginPage._emailAddressField.setValue(signupData.email);
-    expect(retainLoginPage._emailAddressField.getValue()).equals(signupData.email);
+    retainLoginPage._emailAddressField.setValue(apiEmailAddress);
+    expect(retainLoginPage._emailAddressField.getValue()).equals(apiEmailAddress);
   });
 
   it('enter password', () => {
-    retainLoginPage._passwordField.setValue(signupData.password);
-    expect(retainLoginPage._passwordField.getValue()).equals(signupData.password);
+    retainLoginPage._passwordField.setValue(apiPassword);
+    expect(retainLoginPage._passwordField.getValue()).equals(apiPassword);
   });
 
   it('click on Sign in button', () => {
@@ -164,13 +164,13 @@ describe('Log into account', () => {
     retainLoginPage._authUserName.waitForDisplayed({ timeout: 3000 });
 
     console.log('UserName: ', retainLoginPage._authUserName.getText());
-    expect(retainLoginPage._authUserName.getText()).equals('testuser demo');
+    expect(retainLoginPage._authUserName.getText()).equals('test demo');
 
     console.log('Dispalyed: ', retainLoginPage._myAccount.isDisplayed());
     expect(retainLoginPage._myAccount.isDisplayed()).equals(true);
     browser.pause(5000);
   });
-  
+
 });
 
 
@@ -258,11 +258,11 @@ describe('Add Products to cart', function () {
     expect(dress).to.equal(name);
     expect(color_size).to.include(color);
     expect(qnt).to.equal(quantity);
-    expect(cart_price).to.equal('$' + price.toString()+'.00');
+    expect(cart_price).to.equal('$' + price.toString() + '.00');
     homepage.cont_shop();
     browser.pause(5000);
   })
-  
+
 })
 
 
@@ -320,92 +320,93 @@ describe("Checkout Process", function () {
     expect(true).to.equal(paymentPage.isBankWirePaymentPresent(), 'Bankwire payment option is not present in payment Page');
     paymentPage.clickBankWirePayment();
     // assert.equal('You have chosen to pay by bank wire. Here is a short summary of your order:', paymentPage.getPaymentTypeMessage(), 'Payment type message is not present')
-    expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getPaymentTypeMessage(), 'Payment type message is not present');    
+    expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getPaymentTypeMessage(), 'Payment type message is not present');
     paymentPage.clickConfirmMyOrder();
     // assert.equal('Your order on My Store is complete.', paymentPage.getConfirmationMessage(), 'Confrimation message is not present')
     expect('Your order on My Store is complete.').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
     // expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
 
+    browser.pause(200);
 
-   
   })
 
 })
 
-// Visual Camprison
-describe('Visual Validation', () => {
-  it('Save Elements', () => {
+// // Visual Validation
+// describe('Visual Validation', () => {
+//   it('Save Elements', () => {
 
-    homepage.moveToCategoryPage();
+//     homepage.moveToCategoryPage();
 
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
+//     // scroll to bestseller
+//     homepage.getBestseller().scrollIntoView();
 
-    // Save bestseller
-    browser.saveElement(homepage.getBestseller(), 'getBestseller');
+//     // Save bestseller
+//     browser.saveElement(homepage.getBestseller(), 'getBestseller');
 
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
+//     // scroll to menscoat
+//     homepage.getMensCoats().scrollIntoView();
 
-    // Save menscoat
-    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
+//     // Save menscoat
+//     browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
 
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
+//     // scroll to socialblock
+//     homepage.getSocialBlock().scrollIntoView();
 
-    // Save socialblock
-    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
-  });
+//     // Save socialblock
+//     browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
+//   });
 
-  it('Compare Elements', () => {
+//   it('Compare Elements', () => {
 
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
+//     // scroll to bestseller
+//     homepage.getBestseller().scrollIntoView();
 
-    // Check bestseller
-    expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
+//     // Check bestseller
+//     expect(browser.checkElement(homepage.getBestseller(), 'getBestseller')).equal(0);
 
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
+//     // scroll to menscoat
+//     homepage.getMensCoats().scrollIntoView();
 
-    // Check menscoat
-    expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
+//     // Check menscoat
+//     expect(browser.checkElement(homepage.getMensCoats(), 'getMensCoats')).equal(0);
 
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
+//     // scroll to socialblock
+//     homepage.getSocialBlock().scrollIntoView();
 
-    // Check socialblock
-    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
-  });
- 
-});
+//     // Check socialblock
+//     expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock')).equal(0);
+//   });
+
+// });
 
 
 describe('Visual Validation For Different Elements', () => {
-  it('Save Elements', () => {
+  // it('Save Elements', () => {
 
-    homepage.moveToCategoryPage();
-    // scroll to bestseller
-    homepage.getBestseller().scrollIntoView();
+  //   homepage.moveToCategoryPage();
+  //   // scroll to bestseller
+  //   homepage.getBestseller().scrollIntoView();
 
-    // Save bestseller
-    browser.saveElement(homepage.getBestseller(), 'getBestseller');
+  //   // Save bestseller
+  //   browser.saveElement(homepage.getBestseller(), 'getBestseller');
 
-    // scroll to menscoat
-    homepage.getMensCoats().scrollIntoView();
+  //   // scroll to menscoat
+  //   homepage.getMensCoats().scrollIntoView();
 
-    // Save menscoat
-    browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
+  //   // Save menscoat
+  //   browser.saveElement(homepage.getMensCoats(), 'getMensCoats');
 
-    // scroll to socialblock
-    homepage.getSocialBlock().scrollIntoView();
+  //   // scroll to socialblock
+  //   homepage.getSocialBlock().scrollIntoView();
 
-    // Save socialblock
-    browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
-  });
+  //   // Save socialblock
+  //   browser.saveElement(homepage.getSocialBlock(), 'getSocialBlock');
+  // });
 
   it('Compare Elements', () => {
 
+    homepage.moveToCategoryPage();
     // scroll to bestseller
     homepage.getBestseller().scrollIntoView();
 
@@ -422,9 +423,9 @@ describe('Visual Validation For Different Elements', () => {
     homepage.getSocialBlock().scrollIntoView();
 
     // Check socialblock
-    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock',{
-      resizeDimensions : { top: 150, right: 170, bottom: 140, left: 50}
-      })).equal(0);
+    expect(browser.checkElement(homepage.getSocialBlock(), 'getSocialBlock', {
+      resizeDimensions: { top: 0, right: 20, bottom: 50, left: 0 }
+    })).equal(0);
   });
- 
+
 });
