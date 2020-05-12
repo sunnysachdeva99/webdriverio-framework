@@ -161,7 +161,7 @@ describe('Log into account', () => {
   });
 
   it('user should sign in successfully', () => {
-    retainLoginPage._authUserName.waitForDisplayed({ timeout: 3000 });
+    retainLoginPage._authUserName.waitForDisplayed({ timeout: 5000});
 
     console.log('UserName: ', retainLoginPage._authUserName.getText());
     expect(retainLoginPage._authUserName.getText()).equals('test demo');
@@ -302,6 +302,7 @@ describe("Checkout Process", function () {
     expect(parseFloat(getTotalCartPrice)).to.equal(totalCartPrice, 'Total Cart Price is wrong');
 
     summaryPage.clickProceedToCheckout();
+    browser.pause(2000);
     // assert.equal(true, addressPage.isAddressDeliveryPresent(), 'Delivery address is not present  in address Page');
     expect(true).to.equal(addressPage.isAddressDeliveryPresent(), 'Delivery address is not present in address Page');
     // assert.equal(true, addressPage.isBillingAddressPresent(), 'Billing address is not present in address Page');
@@ -322,11 +323,12 @@ describe("Checkout Process", function () {
     // assert.equal('You have chosen to pay by bank wire. Here is a short summary of your order:', paymentPage.getPaymentTypeMessage(), 'Payment type message is not present')
     expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getPaymentTypeMessage(), 'Payment type message is not present');
     paymentPage.clickConfirmMyOrder();
+    browser.pause(2000);
     // assert.equal('Your order on My Store is complete.', paymentPage.getConfirmationMessage(), 'Confrimation message is not present')
     expect('Your order on My Store is complete.').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
     // expect('You have chosen to pay by bank wire. Here is a short summary of your order:').to.equal(paymentPage.getConfirmationMessage(), 'Confrimation message is not present');
 
-    browser.pause(200);
+    browser.pause(2000);
 
   })
 
